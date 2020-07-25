@@ -1,4 +1,5 @@
-$(function()
+
+    $(function()
     {
 //------------------------头部内容-------------------------------------------
         //head div显示/隐藏
@@ -39,20 +40,32 @@ $(function()
                 'color':'#ab8e66',
                 'background-color':' #f7f6f6',
                 'border-bottom': '2px #cea861 solid',
-            }).siblings('input').css
-            (
+            });
+            $(this).siblings('input').css(
                 {
                     'color':'black',
                     'background': 'rgb(227, 226, 226)',
-                    'border-bottom': '0px',
-                });
+                    'border-bottom': '1px',
+                }
+            );
         //图片轮播
             let idximg = $(this).index();
-            $('.promo-1 > a').eq(idximg).children('img').stop(false,true).show(150).parent('a').siblings('a').children('img').stop(false,true).hide(150);
+            $('.promo-1 > a').eq(idximg).stop(true,true).show(300).siblings('a').stop(true,true).hide(300);
         });
 //----------------------------综合/公告/赛事/攻略/社区--------------------------------
         $('.r-promo > .part-ul-title > li').on('mouseenter',function()
         {
+            $(this).css(
+                {
+                    'color':'#1da6ba',
+                    'font-weight':'bold',
+                }
+            ).siblings('li').css(
+                {
+                    'color':'',
+                    'font-weight':'',
+                }
+            )
             var idxb = $(this).index();
             
             $('.r-promo > a').eq(idxb).show().siblings('a').hide();
@@ -221,27 +234,27 @@ $(function()
 //--------------------------FANART创作馆--------------------------------------
         $('#creative > a > div').mouseenter(function()
         {
-            $(this).children('div').stop(true,false).fadeIn(300);
+            $(this).children('div').stop(true,true).fadeIn(300);
         }).mouseleave(function()
         {
-            $(this).children('div').stop(true,false).fadeOut(300);
+            $(this).children('div').stop(true,true).fadeOut(300);
         });
 //--------------------------用户调查/合作媒体--------------------------------------
        $('#user-survey > a > img').mouseenter(function()
        {
-           $(this).stop(true,false).animate({'margin-top':'0px'},200,'linear');
+           $(this).stop(true,false).animate({'margin-top':'-15px'},200,'linear');
        }).mouseleave(function()
        {
-            $(this).stop(true,false).animate({'margin-top':'15px'},200,'linear');
+            $(this).stop(true,false).animate({'margin-top':'0px'},200,'linear');
        });
        $('#user-survey > ul > li').mouseenter(function()
        {
            let idxc = $(this).index();
-           $('#user-survey > ul > li > a > img').eq(idxc).animate({'top':'-10px'},300,'linear');
+           $('#user-survey > ul > li > a > img').eq(idxc).stop(true,false).animate({'top':'-10px'},300,'linear');
        }).mouseleave(function()
        {
             let idxc = $(this).index();
-            $('#user-survey > ul > li > a > img').eq(idxc).animate({'top':'0px'},300,'linear');
+            $('#user-survey > ul > li > a > img').eq(idxc).stop(true,false).animate({'top':'0px'},300,'linear');
        });
        $('#user-survey > ul > .user-survey-year').click(function()
        {
@@ -249,10 +262,10 @@ $(function()
        });
        $('#user-survey > ul > .media').mouseenter(function()
        {
-           $('#user-survey > ul > li > .media-div').stop(false,false).fadeIn(300);
+           $('#user-survey > ul > li > .media-div').stop(true,true).fadeIn(300);
        }).mouseleave(function()
        {
-            $('#user-survey > ul > li > .media-div').stop(false,false).fadeOut(300);
+            $('#user-survey > ul > li > .media-div').stop(true,true).fadeOut(300);
        });
 //---------------------------------侧边栏-----------------------------------------
        $('#sidebar > li').mouseenter(function()
