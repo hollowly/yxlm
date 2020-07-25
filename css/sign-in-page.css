@@ -1,0 +1,464 @@
+/*-- 字体 --*/
+@font-face{
+	font-family: 'Lemon-Regular';
+	src:url(../fonts/Lemon-Regular.ttf) format('truetype');
+}
+@font-face{
+	font-family: 'Oswald-Light';
+	src:url(../fonts/Oswald-Light.ttf) format('truetype');
+}
+@font-face{
+	font-family: 'Oswald-Regular';
+	src:url(../fonts/Oswald-Regular.ttf) format('truetype');
+}
+/*-- 主页css --*/
+body {
+	background: url("../img/000.jpg") no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+#top-img{
+	position:absolute;
+	top: 80px;
+	left: 180px;
+}
+.forgot-password{
+	font-size: 15px;
+	color: white;
+	float: right;
+	cursor: pointer;
+	margin-top:7px;
+ }
+ .forgot-password:hover{
+	text-decoration: underline;
+ }
+ #user1,#pass1{
+	margin-left: 20px;
+	width: 58%;
+	font-size: 15px;
+	color: rgb(187, 182, 182);
+ }
+ #pass1{
+	margin-left: -5px;
+	float: left;
+	width: 50%;
+	font-size: 13px;
+ }
+ .form-2{
+	color: white;
+	font-size: 18px;
+ }
+ .span1{
+	color: white;
+	font-size: 22px;
+	margin-left:60px;
+ }
+ .form-2 > a{
+	 width: 27%;
+	 height: 40px;
+	 border-radius: 5px;
+	 text-align: center;
+	 line-height: 40px;
+	 display: inline-block;
+	 font-size: 16px;
+	 background: rgb(233,236,239);
+	 color: rgb(73,80,87);
+	 cursor: pointer;
+	 margin-left: 10px;
+ }
+ .form-2 > a:hover{
+	background: rgb(90,98,104);
+	color: white;
+ }
+ .form-1-p{
+	 font-size: 12px;
+	 text-align: center;
+	 color: rgb(199, 199, 199);
+ }
+ .back-login{
+	 position: relative;
+	 top: -25px;
+	 left: -15px;
+	 font-size: 14px;
+	 color: white;
+	 cursor: pointer;
+ }
+.container {
+	margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+	font-family: Lemon-Regular;
+	text-shadow:rgb(255, 255, 255) 4px 1px 3px; 
+	color: rgba(31, 17, 226, 0.8);
+	
+}
+
+.signin {
+    width: 25%;
+    margin: 2% auto 0;
+	/* background: linear-gradient(to right, #5ee7df 0%, #b490ca 80%); */
+	background-color: rgba(58, 52, 45, 0.6);
+    padding: 40px;
+    border: 2px ridge rgba(238, 238, 238, 0.13);
+    border-radius: 5px;
+    -moz-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+	-webkit-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+	box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+	border-bottom: none;
+}
+
+input.user {
+    width: 83%;
+    padding: 10px 10px 10px 45px;
+    background: rgba(23, 24, 25, 0.29) url("../img/user.png") no-repeat 10px 10px;
+    border: 1px solid #7B7474;
+    border-radius: 5px;
+    font-family: Oswald-Light;
+    font-size: 18px;
+    color: #FFF;
+    outline: none;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+input.pass {
+    width: 83%;
+    padding: 10px 10px 10px 45px;
+    background: rgba(23, 24, 25, 0.29) url("../img/pass.png") no-repeat 11px 10px;
+    border: 1px solid #7B7474;
+    border-radius: 5px;
+    font-family: Oswald-Light;
+    font-size: 18px;
+    color: #FFF;
+    outline: none;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+label {
+    font-family: Oswald-Light;
+    color: #FFF;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid #7B7474;
+    font-family: Oswald-Regular;
+    font-size: 17px;
+    color: #FFFFFF;
+    background-color: rgba(23, 24, 25, 0.24);
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+	background-color: rgba(16, 89, 134, 0.52);
+	-webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+/* -------------------------页脚------------------------------ */
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: black;
+	font-size: 14px;
+	font-family: Oswald-Regular;
+}
+.footer > a{
+   	color: black;
+   	font-family: Oswald-Regular;
+	text-decoration: none;
+}
+.footer > a:hover{
+   text-decoration: underline;
+}
+/*--- Responsinator Code ---*/
+@media screen and (max-width: 1920px) {
+	.signin {
+		width: 23%;
+	}
+	input.user {
+		width: 87%;
+	}
+	input.pass {
+		width: 87%;
+	}
+}
+
+@media screen and (max-width: 1680px) {
+	input.user {
+	    width: 85%;
+	}
+	input.pass {
+	    width: 85%;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	input.user {
+    	width: 84%;
+	}
+	input.pass {
+    	width: 84%;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.signin {
+    	width: 26%;
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	input.user {
+    	width: 83.5%;
+	}
+	input.pass {
+    	width: 83.5%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.signin {
+    	width: 27%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.signin {
+    	width: 30%;
+	}
+		input.user {
+	    width: 84%;
+	}
+	input.pass {
+	    width: 84%;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	input.user {
+		width: 82.5%;
+	}
+	input.pass {
+    	width: 82.5%;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	input.user {
+    	width: 81.5%;
+	}
+	input.pass {
+    	width: 81.5%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.signin {
+    	width: 31%;
+	}
+}
+
+@media screen and (max-width: 966px) {
+	.signin {
+    	width: 33%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.signin {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 853px) {
+	.signin {
+    	width: 38%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.signin {
+    	width: 40%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.signin {
+    	width: 40%;
+	}
+	input.user {
+    	width: 81%;
+	}
+	input.pass {
+    	width: 81%;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.signin {
+    	width: 42%;
+	}
+}
+
+@media screen and (max-width: 667px) {
+	.signin {
+    	width: 47%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	input.user {
+	    width: 80%;
+	}
+	input.pass {
+	    width: 80%;
+	}
+}
+
+@media screen and (max-width: 603px) {
+	.signin {
+    	width: 51%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.signin {
+    	width: 51%;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	h1 {
+	    font-size: 35px;
+	    margin: 35px 0 0;
+	}
+	.signin {
+    	width: 50%;
+    	margin: 60px auto 0;
+	}
+}
+
+@media screen and (max-width: 533px) {
+	.signin {
+    	width: 58%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.signin {
+    	width: 63%;
+	}
+}
+
+@media screen and (max-width: 441px) {
+	h1 {
+	    font-size: 35px;
+	    margin: 50px 0;
+	}
+	.signin {
+    	width: 75%;
+    	margin: 50px auto;
+   	    padding: 25px;
+	}
+	input.user {
+	    width: 82%;
+	    padding: 7px 10px 7px 45px;
+	    font-size: 17px;
+	    background: rgba(23, 24, 25, 0.29) url("../img/user.png") no-repeat 10px 6px;
+	}
+	input.pass {
+	    width: 82%;
+	    padding: 7px 10px 7px 45px;
+	    font-size: 17px;
+        background: rgba(23, 24, 25, 0.29) url("../img/pass.png") no-repeat 10px 6px;
+	}
+	input[type="submit"] {
+    	padding: 7px 0;
+	}
+}
+
+@media screen and (max-width: 384px) {
+	h1 {
+    	font-size: 32px;
+	}
+	input.user {
+	    width: 79%;
+	}
+	input.pass {
+	    width: 79%;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	h1 {
+    	font-size: 30px;
+	}
+	.signin {
+    	width: 75%;
+    	padding: 25px;
+	}
+	input.user {
+	    width: 79%;
+	    padding: 7px 10px 7px 45px;
+	    font-size: 16px;
+        background: rgba(23, 24, 25, 0.29) url("../img/user.png") no-repeat 10px 6px;
+	}
+	input.pass {
+	    width: 79%;
+	    padding: 7px 10px 7px 45px;
+        font-size: 16px;
+        background: rgba(23, 24, 25, 0.29) url("../img/pass.png") no-repeat 10px 6px;
+	}
+	input[type="submit"] {
+    	padding: 7px 0;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	input.user {
+	    width: 78%;
+	}
+	input.pass {
+	    width: 78%;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	h1 {
+    	font-size: 27px;
+    	margin: 35px 0;
+    }
+	.signin {
+    	width: 80%;
+   	    margin: 40px auto;
+    	padding: 20px;
+    }
+	input.user {
+	    width: 76.5%;
+	    padding: 7px 10px 7px 45px;
+	    font-size: 16px;
+	    background: rgba(23, 24, 25, 0.29) url("../img/user.png") no-repeat 10px 6px;
+	}
+	input.pass {
+	    width: 76.5%;
+	    padding: 7px 10px 7px 45px;
+	    font-size: 16px;
+	    background: rgba(23, 24, 25, 0.29) url("../img/pass.png") no-repeat 10px 6px;
+	}
+	input[type="submit"] {
+	    padding: 7px 0;
+	}
+}

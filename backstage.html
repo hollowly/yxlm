@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+/* -----------------------------头部-------------------------------------- */
+        #head{
+            width: 100%;
+            height: 60px;
+            background: #0f2238;
+            float: left;
+            color: white;
+            line-height: 60px;
+            /* border: 1px solid red; */
+        }
+        #head > span{
+            display: inline-block;
+            border-left: 1px solid rgb(211, 209, 209);
+            text-indent: 1rem;
+            line-height: 30px;
+            width: 200px;
+            height: 30px;
+        }
+        #head > div{
+           width: 200px;
+           height: 40px;
+           float: right;
+           text-align: center;
+           line-height: 60px;
+           margin-top: 10px;
+           color: white;
+           cursor: pointer;
+        }
+        #head > a{
+            margin-left: 50px;
+            margin-right: 20px;
+            float: left;
+            line-height: 60px;
+        }
+/* -----------------------------左边选择栏-------------------------------------- */
+        #left{
+            float: left;
+            height:1635px;
+            width: 17.5%;
+            background: rgb(246, 247, 249);
+        }
+        #left > a{
+            display: inline-block;
+            width: 100%;
+            height: 50px;
+            color: rgb(56, 56, 56);
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+            /* border: 1px solid red; */
+            cursor: pointer;
+        }
+        #left > a:first-child{
+            background: white;
+        }
+        #left > a:active{
+            background: rgb(224, 222, 222);
+        }
+        #left > a > div{
+            line-height: 47px;
+            float: left;
+        }
+        #left > a > img{
+            margin-left: 70px;
+            margin-right: 25px;
+            float: left;
+            margin-top: 13px;
+            line-height: 100px;
+        }
+/* -----------------------------右边选择栏-------------------------------------- */
+/* 账户与安全 */
+        #account-security{
+            width: 75%;
+            height: 22px;
+            line-height: 22px;
+            border-left: 5px solid blue;
+            float: left;
+            font-size: 16px;
+            margin-top: 50px;
+            margin-left: 40px;
+            text-indent: 1.5rem;
+            margin-bottom: 40px;
+            /* border: 1px solid red; */
+        }
+        #content{
+            width: 50%;
+            float: left;
+            list-style: none;
+            margin-left: 100px;
+            color: rgb(102, 97, 97);
+            /* border: 1px solid red; */
+        }
+        #content > li{
+            display: block;
+            line-height: 40px;
+            width: 750px;
+            height: 70px;
+            /* border: 1px solid red; */
+            border-bottom: 1px solid rgb(224, 224, 224);
+            margin-bottom: 30px;
+        }
+        #content > .change > input:hover{
+           color:#3494fc;
+           border-bottom: 1px solid #3494fc;
+        }
+        #content > .change > input, #content > li > input{
+            width: 100%;
+            height: 40%;
+            transform:translateY(-20%);
+            border: none;
+            outline: none;
+            color: rgba(0, 0, 0, 0.54);
+            font-weight: 700;
+        }
+        /* 开关代码 */
+        #div1{
+            width:50px;
+            height: 25px;
+            border-radius: 50px;
+            position: relative;
+            float: right;
+            margin-right: 570px;
+            margin-top: 7px;
+        }
+        #div2{
+            width: 21px;
+            height: 21px;
+            border-radius: 48px;
+            position: absolute;
+            background: white;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+        }
+        .open1{
+            background: rgba(0,184,0,0.8);
+        }
+        .open2{
+            top: 2px;
+            right: 1px;
+        }
+        .close1{
+            background: rgba(255,255,255,0.4);
+            border:1px solid rgba(0,0,0,0.15);
+            border-left: transparent;
+        }
+        .close2{
+            left: 0px;
+            top: 0px;
+            border:1px solid rgba(0,0,0,0.1);
+        }
+    /* 开关代码完 */
+        #content-div{
+            width: 100px;
+            height: 60px;
+            float: right;
+            text-align: center;
+            border-radius: 5px;
+            /* border: 1px solid red; */
+        }
+        #content-div:hover{
+           background: rgb(244, 244, 244);
+        }
+        #administration-div{
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            /* border: 1px solid red; */
+            float: right;
+            margin-right: 470px;
+            cursor: pointer;
+        }
+        #administration-div:hover{
+            background: rgba(247,251,255,0.9);
+        }
+        .correlation{
+            width: 100%;
+            height: 200px;
+            margin-bottom: 100px;
+            /* display: none; */
+        }
+        .correlation > div{
+            width: 30%;
+            height: 66px;
+            float: left;
+            font-size: 15px;
+            line-height: 66px;
+            /* border: 1px solid red; */
+        }
+        .correlation > .correlation-div{
+            float: right;
+            /* border: 1px solid red; */
+        }
+        .correlation > div > img{
+            width: 18px;
+            margin-right: 15px;
+            vertical-align: middle;
+            
+        }
+        .correlation > .correlation-div > a > input{
+            outline: none;
+            cursor: pointer;
+            margin-top: 11px;
+            width: 100px;
+            height: 40px;
+            float: right;
+            font-size: 16px;
+            background: white;
+            border-radius: 5px;
+            border:1px solid rgb(224, 224, 224);
+            color: rgb(52,148,252);
+        }
+/* 通知 */
+        #div-all{
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            text-indent: 1rem;
+        }
+        #content > li > #div-all > .select:hover{
+           color:#3494fc;
+           border-bottom: 1px solid #3494fc;
+           background: rgb(224,224,224);
+        }
+/* 其他 */
+        #cancel{
+            display: inline-block;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 5px;
+            width: 60px;
+            height: 35px;
+            margin-left: 70px;
+            color: #3494fc;
+            text-decoration: none;
+        }
+        #cancel:hover{
+            background: rgb(228,241,255);
+            
+        }
+        #footer{
+            margin-top: 50px;
+            float: left;
+            width: 82.4%;
+            color: rgba(0,0,0,.54);
+            font-size: 12px;
+            text-align: center;
+            /* background: red; */
+            font-weight: 400;
+        }
+        #footer a{
+            color: rgba(0,0,0,.54);
+            text-decoration: none;
+        }
+        #footer a:hover{
+            color: #3494fc;
+            text-decoration: underline;
+        }
+
+
+        #hide-div{
+            position: relative;
+            top: 50px;
+            right: -210px;
+            display: none;
+        }
+        #hide-div > ul{
+            width: 140px;
+            height: 220px;
+            border-radius: 7px;
+            box-shadow: 0 0 10px #ccc;
+            border: 1px solid rgb(235, 230, 230);
+        }
+        #hide-div > ul > a{
+           text-decoration: none;
+        }
+        #hide-div > ul > a > li{
+            line-height: 42px;
+            width: 140px;
+            height: 44px;
+            text-align: left;
+            color:rgba(0, 0, 0, 0.87);
+            list-style: none;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            /* border: 1px solid red; */
+        }
+        #hide-div > ul > a > li > img{
+            width: 22px;
+            vertical-align: middle;
+            margin-bottom: 2px;
+            margin-left: 13px;
+            margin-right: 10px;
+        }
+        #hide-div > ul > a > li:hover{
+            background:rgb(245,245,245)
+        }
+           
+    </style>
+</head>
+<body>
+    <div id='head'>
+        <a href="index.html" target="_blank"><img src="img/logo-public.png"></a>
+        <span>账户中心</span>
+        <div><img src="img/hollow.jpg" style="width: 40px;" id='head-img'></div>
+        <div id='hide-div'>
+            <ul>
+                <a href="https://home.cnblogs.com/" target="_blank"><li><img src="img/backstage-head-1.png">我的园子</li></a>
+                <a href="https://www.cnblogs.com/hollows/" target="_blank"><li><img src="img/backstage-head-2.png">我的博客</li></a>
+                <a href="backstage.html"><li style="border-bottom: 1px solid #ccc;"><img src="img/backstage-head-3.png">设置</li></a>
+                <a href="https://group.cnblogs.com/forum/public/" target="_blank"><li><img src="img/backstage-head-4.png">帮助和反馈</li></a>
+                <a href="index.html" target="_blank"><li><img src="img/backstage-head-5.png">退出</li></a>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div id='left'>
+        <a href="backstage.html"><img src="img/Account-settings.png"><div>账户设置</div></a>
+        <a href="https://home.cnblogs.com/set/profile/"><img src="img/personal-data.png"><div>个人资料</div></a>
+    </div>
+
+    <div id='right-1'>
+        <div id='account-security'>账户与安全</div>
+        <!-- 账户与安全 -->
+        <ul id='content'>
+            <li>
+                <div style="display: inline-block;">头像</div>
+                <div id='content-div'><img src="img/hollow.jpg" style="width: 40px;margin-top: 10px;cursor: pointer;"></div>
+            </li>
+            <li class="change">登录用户名<br><input type="text" value="hollows"></input></li>
+            <li class="change">密码<input type="text" value="******"></input></li>
+            <li class="change">显示昵称<input type="text" value="hollows"></input></li>
+            <li class="change">邮箱<input type="text" value="2499538506@qq.com"></input></li>
+            <li class="change">手机<input type="text" value="13980524660"></input></li>
+
+            <li style="border:none;">两步验证
+                <div id="div1" class="open1">
+                    <div id="div2" class="open2"></div>
+                </div>
+                <p style="font-size: 14px;">在新设备登录时，需要输入邮箱或手机验证码来完成两步验证，
+                给账户安全多一层保障。开启前请确认绑定的邮箱和手机可以正常使用。</p>
+            </li><br><br>
+            <li style="border:none;">关联第三方账户<div id='administration-div'>管理</div>
+                <div class='correlation'>
+                    <div><img src="img/WeChat.png">微信</div> <div>未关联</div>
+                    <div class="correlation-div">
+                        <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxbd7b37548b5433e
+                        a&scope=snsapi_login,snsapi_userinfo&response_type=code&redirect_uri=https%3A%2F%2Faccount.cnblogs.com%
+                        2Foauth%2Fsignin-wechat&state=CfDJ8B9DwO68dQFBg9xIizKsC6RTgoN9sPw6T03oeIFYyS_Wlq_hV3ZMShWmnVsrXGT7_Wz7yR
+                        4Sh4hv1t--hi8lw-MY4RIRNBxws0fv-Ki60IqqtlVyPInpmt_cszqCOBC1KmMISjyeBoeEiAreJiOp6AlaWbqE6Vbl_3Yus7bJApVqW-f
+                        z66769mWkmVQpaB30Lb4n_whTqYYGt5Hw-ljpEzOrfCcrjAYAShw5K2V2HeeEQdTjUM_MPVJVysj2XPE-WSe9L__F_xmR7FBd2nJ64bCf7
+                        1y1ls6hLaB7sfSO6w7LS2-KS3CsORgLcQICNKldHtXRAngFAP55116JjC3uXCyA816g1_Wa7AWXpuad6VfogBU1KE976KNohf5s4WTynPR
+                        BJDNz5k6Jky8loqLIHnsdM9C6VKIIHL92gUgtEEphpHZZcV-rH26Fffw3dcaFmA">
+                        <input type="button" value="关联">
+                        </a>
+                    </div>
+
+                    <div><img src="img/QQ.png">QQ</div> <div>未关联</div>
+                    <div class="correlation-div">
+                        <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=101880508&
+                        scope=get_user_info&response_type=code&redirect_uri=https%3A%2F%2Faccount.cnblogs.com%2Foauth%2Fsignin-qq&state=
+                        CfDJ8B9DwO68dQFBg9xIizKsC6TwlDu0b4fgqkIyOdgcHdg4bd-UvElDeMwuA7gvvxfRr2iCijJtX-7iHQgiMB2_mXOAshnWPk82L-ux_o6qJhX0K
+                        QtNhfvYtHfFypLzTCmSqCvFvu2EPL-mQbNbzXi-e7YrpQo5n05JnvlnVRRDV8wWO9Ie8yhfuY7ilI6Tsf3FTjpwVhMFMYGJ-jERJE8I1pj1bOQtGm
+                        thrLeu_lLcLAV7diQEZuyzllnBX_X3dR04mXA10cCepPbhNdxZ-_AjxztmyHh_qeV803-7qUZx-xh6NhbdimBvQIMawrwGn9w9RyXFqJbG1CMeuZ2
+                        hlm2tEHNCDKt0u9WNb4KGUO3DW17zvdJeHwKIKvz13cZw3Gxe7dWbz8eUbdbexsWSIf8x0HmaDAuwWx8Fm_GeO-jsjEkRl7tnNQQUe-EbMFXLkdFNPQ">
+                        <input type="button" value="关联">
+                        </a>
+                    </div>
+
+                    <div><img src="img/GitHub.png">GitHub</div> <div>未关联</div>
+                    <div class="correlation-div">
+                        <a href="https://github.com/login?client_id=045e38c17fbe50bf350f&return_to=%2Flogin%2F
+                        oauth%2Fauthorize%3Fclient_id%3D045e38c17fbe50bf350f%26redirect_uri%3Dhttps%253A%252F%252Faccount.cnblogs.com%2
+                        52Foauth%252Fsignin-github%26response_type%3Dcode%26scope%3Duser%253Aemail%26state%3DCfDJ8B9DwO68dQFBg9xIizKsC6
+                        R66xqGWXCGVxkgD_aCqHFO4I9CKRlhgyrPFh_9GrINHCMAeMlulJVOcl6AVfX1XcVdk5pwKFGJqw6n_6zC4vfn-G7VjljCmR4c6McmUvEdhBef-
+                        r9BqL9824Cv5shH9ulFyYEtk_gKJzcUJPQYX5mKTD02nzQ7QKou4zyxnEg6ri1NNCeF721NRkoS4FJF6wqj7loRUm4Kuajrl_PcD_EV4jpoKz2X7
+                        _W10UlTB-A-0SlI3RzYVRxkBG9YkoEQ_XMiGBS74Fg7LsYHFzCWyvHLjn6HLfefwMSJUIFek7F9wvGIElXlOYZ79i6wVVN3gkGf9P6c-1vZZ2Gox
+                        rrdR_tcbfOuAJZuLBaCIbJ7G51mAyYUVfMGZISgSeptyN4GXYQAYNYFpA-GLb-E42X2dCS0ZvPUBtPVmEKqUkinoE5iPA">
+                        <input type="button" value="关联">
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- 通知 -->
+        <div id='account-security'>通知</div>
+        <ul id='content'>
+            <li class="change">通知邮箱<br><input type="text" value="2499538506@qq.com"></input></li>
+            <li>回复通知类型<br>
+            <div id='div-all'>
+                <div style="display: none;" class="select">无</div>
+                <div class="select" style=' border-bottom: 1px solid rgb(224, 224, 224);'>邮件</div>
+                <div style="display: none;" class="select">短消息</div>
+                <div style="display: none;" class="select">邮件和短消息</div>
+            </div>
+            </li>
+        </ul>
+        <!-- 其他 -->
+        <div id='account-security'>其他</div>
+        <ul id='content'>
+            注销账户<a href="https://account.cnblogs.com/settings/account/close-account" id="cancel">注销</a>
+        </ul>
+        <!-- 页脚 -->
+        <div id='footer'>
+            <a href=''>关于博客园</a> <a href=''>联系我们</a> 2004-2020 博客园 Powered by .NET Core on Kubernetes
+        </div>
+
+    </div>
+
+  
+
+
+</body>
+</html>
+<script src="jquery-3.5.0.js"></script>
+<script>
+    $(function()
+    {
+        $('#div2').on('click',function()
+        {
+            div1.className=(div1.className=="close1")?"open1":"close1";
+            div2.className=(div2.className=="close2")?"open2":"close2";
+        });
+
+        $('#head-img').click(function()
+        {
+            $('#hide-div').fadeIn(200);
+        });
+
+        $('#hide-div').mouseleave(function()
+        {
+            $(this).fadeOut(200);
+        })
+
+        $('#administration-div').click(function()
+        {
+            if($('.correlation').css('display') == 'none')
+            {
+                $('.correlation').show(300);
+            }
+            else
+            {
+                $('.correlation').hide(300);
+            }
+            
+        })
+
+        $('#content > li > #div-all >  .select').click(function()
+        {
+            $(this).siblings('div').show(300);
+            $('#div-all').css('box-shadow','10px 10px 15px #ccc');
+            $(this).siblings('div').click(function()
+            {
+                $(this).show(300).siblings('div').hide(300);
+                $('#div-all').css('box-shadow','');
+
+                setTimeout(function(){alert('修改成功');},300);
+                setTimeout(function(){location.reload(true);},301);
+            });
+        });
+
+        $('#hide-div').click(function()
+        {
+            console.log($(this).parent())
+        })
+    })
+</script>

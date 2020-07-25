@@ -1,0 +1,3101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base target="_blank" />     <!--全局定义a标签打开通过新窗口打开_black -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄联盟主页</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 1800px;
+        height: 1000px;
+        /* border: 1px solid red; */
+        background: rgb(236, 235, 235);
+        /* background-image: linear-gradient(to top, #9EFBD3 0%, #45D4FB 48%, #57E9F2 100%); */
+    }
+    p{
+        margin-top:40px;
+    }
+
+    /* 鼠标未访问/移动到/选定/已访问/都取消下划线*/
+    a:link,a:hover,a:active,a:visited{
+        text-decoration: none;
+    }
+
+/* -----------------------视频/公告/新闻/娱乐/赛事/教学------------------------------- */
+    .sping{
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 20px;
+        box-sizing: border-box;
+        font-size: 12px;
+        border: 1px #e9852d solid;
+        color: #e9852d;
+        line-height: 18px;
+        text-align: center;
+        margin-right: 25px;
+    }
+
+    .ggao{
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 20px;
+        box-sizing: border-box;
+        font-size: 12px;
+        color: #bb9a6c;
+        border: 1px #c5ab86 solid;
+        line-height: 18px;
+        text-align: center;
+        margin-right: 25px;
+    }
+
+    .xwen{
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 20px;
+        box-sizing: border-box;
+        font-size: 12px;
+        color: #bb9a6c;
+        border: 1px #c5ab86 solid;
+        line-height: 18px;
+        text-align: center;
+        margin-right: 25px;
+    }
+    
+    .yle{
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 20px;
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        margin-right: 25px;
+        border: 1px #69c5d2 solid;
+        color: #1da6ba;
+    }
+
+    .sshi{
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 20px;
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        margin-right: 25px;
+        color: #6388c5;
+        border: 1px #97afc5 solid;
+    }
+    
+    .jxue{
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 20px;
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        margin-right: 25px;
+        color: #4ba36a;
+        border: 1px #4ba36a solid;
+    }
+
+    .sju{
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 20px;
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        margin-right: 25px;
+        color: #4ba36a;
+        border: 1px #4ba36a solid;
+    }
+
+/* ------------------------头部内容------------------------------------------- */
+    #big-img{
+        width: 102.8%;
+        /* margin-left:-50px; */
+    }
+    
+    #comm-topact{
+        position:absolute;
+        left:10%;
+        top:0px;
+        z-index: 2;
+        /* cursor: pointer;  小手指*/
+    }
+
+    .head-ul{
+        width: 750px;
+        height: 45px;
+        float: left;
+        text-align: center;
+        position: absolute;
+        top:0px;
+        left: 190px;
+        padding-top: 16px;
+    }
+
+    .head-ul > li{
+        width:100px;
+        list-style: none;
+        float: left;
+        color:#fff;
+        font-size: 18px;
+        margin-right: 50px;
+        cursor: pointer;
+    }
+
+    .head-ul-title{
+        display: block;
+        color: #fff;
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+
+    .head-ul-subtitle{
+        display: block;
+        color: #aeaeae;
+        font-size: 11px;
+        text-align: center;
+    }
+
+/* ------------------------搜索/手机端/欢迎登录------------------------- */
+    #head-userinfo-normal > a > #img1, #head-userinfo-normal > a > #img2{
+        width: 32px;
+        height: 32px;
+        margin-top: 10px;
+        margin-right: 40px;
+        float: left;
+        cursor: pointer;
+    }
+
+    #head-userinfo-normal > #img2-1{
+        position: absolute;
+        top:70px;
+        left:-10px;
+        display: none;
+    }
+
+    #head-userinfo-normal > a > #img3{
+        float: left;
+        width: 55px;
+        cursor: pointer;
+    }
+
+    #head-userinfo-normal{
+        opacity: 0.9;
+        width: 440px;
+        height: 240px;
+        z-index: 2;
+        position: absolute;
+        left: 1130px;
+        top: 5px;
+        /* background: pink; */
+    }
+
+    #head-userinfo-normal > #welcome, #head-userinfo-normal >  #sign{
+        line-height: 60px;
+        color: white;
+        float: left;
+    }
+
+    /* -隐藏登录djv- */
+    #head-userinfo-normal{
+        position: absolute;
+        /* border: 1px solid yellow; */
+    }
+    #head-userinfo-normal > #head-login-hover{
+        width: 305px;
+        height: 180px;
+        /* border: 1px solid red; */
+        font-size: 12px;
+        text-align: center;
+        color: rgb(146, 145, 143);
+        margin-left: 138px;
+        display: none;  
+    }
+    #head-userinfo-normal > #head-login-hover > span{
+        display: inline-block;
+        width: 100%;
+        /* border: 1px solid yellow; */
+        height: 33.333%;
+        background: rgba(10, 10, 10, 0.7);
+    }
+
+    #head-userinfo-normal > #sign{
+        color:#fcebb8;
+    }
+
+    #head-userinfo-normal > #head-login-hover > #Personal-Center{
+        display: inline-block;
+        width: 305px;
+        height: 41px;
+        font-size: 16px;
+        line-height: 40px;
+        color: white;
+        background :black;
+        cursor: pointer;
+    }
+
+/* ------------------------查看详情/历史版本------------------------------------ */
+    #top-act-link{
+        width: 150px;
+        height: 40px;
+        font-size: 13px;
+        text-align: center;
+        background: rgba(51, 51, 50,0.7);
+        border:1px solid rgba(255, 208, 0.7);
+        line-height: 40px;
+        position: relative;
+        left:750px;
+        top:-120px;
+        cursor: pointer;
+    }
+
+    #top-act-link > a > span , #top-version-link > a > span{
+        color: rgba(230, 190, 14, 0.747);
+        /* border:1px solid red; */
+    }
+
+    #top-version{
+        width: 300px;
+        height: 30px;
+        float: left;
+        line-height: 20px;
+        font-size: 13px;
+        position: relative;
+        left:1130px;
+        top:-105px;
+        color:#888787;
+        /* border: 1px solid red; */
+    }
+
+    #top-version > #top-version-link{
+        width: 90px;
+        height: 28px;
+        float: right;
+        line-height: 28px;
+        font-size: 12px;
+        text-align: center;
+        background: rgba(51, 51, 50,0.7);
+        border:1px solid #f5d185;
+    }
+
+    #top-version > span{
+        color: rgb(255, 208, 0);
+    }
+
+    /* ------------------------隐藏div---------------------------------------- */
+    .head-nav-sub-inner > ul > li > a{
+        color: #fff;
+    }
+
+    .head-nav-sub-inner > ul > li > a:hover{
+        color:#e9c06c;
+    }
+
+    /* 遮罩层 */
+    #head-normal{
+        z-index: 98;
+        width: 100%;
+        height: 120px;
+        background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0));
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+
+    /* 移入的显示div */
+    .head-nav-sub-inner{
+        z-index: 99;
+        width: 100%;
+        height: 350px;
+        background: rgba(37, 36, 37, 0.45);
+        color: #fff;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+
+    .head-nav-sub-inner > ul{
+        float: left;
+        margin-right:70px;
+        list-style: none;
+        font-size: 13px;
+        margin-top: 80px;
+    }
+
+    .head-nav-sub-inner > ul >li{
+        margin-bottom: 13px;
+        text-align: center;
+    }
+
+/* ------------------------首页内容------------------------------------------- */
+    #Home-page-content{
+        width:90%;
+        height: 360px;
+        margin-bottom: 50px;
+        margin-top: 70px;
+        /* border: 1px solid red; */
+    }
+
+    .promo{
+        float: left;
+        margin-left: 6%;
+        width: 820px;
+        /* border: 1px solid red; */
+        margin-bottom: 50px;
+    }
+
+    .promo-1{
+        width: 820px;
+        height: 340px;
+        overflow: hidden;
+        /* border: 1px solid red; */
+        float: left;
+    }
+    .promo-1 > a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+    .promo-2 > input{
+        float: left;
+        width: 164px;
+        height: 50px;
+        font-size: 13px;
+        background: rgb(227, 226, 226);
+        border: 0px;
+        outline: none;  /*去除点击事件 */
+    }
+
+    .r-promo{
+        margin-top: -7.5px;
+        margin-left: 50px;
+        width: 535px;
+        height: 390px;
+        float: left;
+        /* border: 1px solid red; */
+    }
+
+    .r-promo > .part-ul-title > li{
+        color:#676767;
+        width: 54px;
+        height: 30px;
+        /* background: pink; */
+        text-align: center;
+        list-style: none;
+        border-bottom: 1px solid #e0e2e2;
+        float: left;
+        font-size: 19px;
+        cursor: pointer;
+    }
+    
+    .r-promo > a{
+        color: #0da0b4;
+        line-height: 60px;
+        width: 535px;
+        height: 55px;
+        text-align:center;
+        font-size: 20px;
+        float: left;
+        cursor: pointer;
+    }
+
+    .r-promo > a:hover{
+        color:#bb9a6c;
+    }
+    
+    .part-ul-content > ul >li:first-child{
+        border-top: 0px solid #dbdad8;
+    }
+
+    .part-ul-content > ul >li{
+        list-style: none;
+        line-height: 42px;
+        border-top: 1px solid #dbdad8;
+    }
+
+    .part-ul-content > ul > li > a{
+        font-size: 14px;
+        color:black;
+    }
+
+/* ------------------------阅读更多/最新资讯------------------------------------------- */
+    .r-promo > .part-ul-content > a > .part-ul-div{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        background: #e3e2e2;
+        color:#676767;
+        text-align: center;
+    }
+
+    .r-promo > .part-ul-content > a > .part-ul-div:hover{
+        background:#dad8d8;
+       
+    }
+
+    .r-promo > .part-ul-content > a > .part-ul-div > span{
+        color: #7ea1a6;
+        font-size: 14px;
+    }
+
+    .r-promo > .part-ul-content > ul{
+        display: none;
+    }
+
+    .r-promo > .part-ul-content  > ul > li > span{
+        float: right;
+        font-size: 14px;
+        color: #9d9d9d; 
+    }
+
+    .r-promo > .part-ul-content > ul > li > a:hover{
+        color:#4ba36a;
+    }
+
+/* --------------------------热门活动------------------------------------------- */
+    #activity{
+        width:820px;
+        height: 340px;
+        margin-left: 6%;
+        float: left;
+        margin-bottom: 60px;
+        /* border: 1px solid red; */
+        /* box-shadow:2px 2px 5px #909090;    阴影 */
+    }
+
+    #activity > #activity-hot, #match-center > #match-center-title{
+        height: 35px;
+        width: 120px;
+        line-height: 35px;
+        font-size: 24px;
+        border-left:3px solid #1da6ba;
+        float: left;
+    }
+
+    #activity > #underway, #match-center > #match-center-subtitle{
+        width:623px;
+        height: 35px;
+        margin-left: 20px;
+        line-height: 32px;
+        float: left;
+        border-bottom: 1px solid #c8c9c9;
+    }
+
+    #activity > #underway > span, #match-center > #match-center-subtitle > span{
+        height: 40px;
+        margin-right: 35px;
+        color: #676767;
+        cursor: pointer;
+    }
+
+    #activity > #activity-more, #match-center > #match-center-more{
+        float: right;
+        width: 54px;
+        height: 35px;
+        font-size: 12px;
+        line-height: 35px;
+        color: #7ea1a6;
+        border-bottom: 1px solid #c8c9c9;
+        cursor: pointer;
+    }
+
+    #activity > #activity-more:hover, #match-center > #match-center-more:hover{
+        border-bottom:2px solid #1da6ba;
+        color:#1da6ba;
+        font-weight:bold;
+    }
+
+    #activity > ul > a > #content{
+        width: 188px;
+        height: 275px;
+        float: left;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 20px;
+        color: black;
+        background: white;
+        /* border: 1px solid red; */
+    }
+
+    #activity > ul > a > #content:hover{
+        color:#1da6ba;
+        /* font-weight: 700; */
+    }
+
+    #activity > ul > a > #content > img{
+        width: 188px;
+    }
+
+    #activity > ul > a > #content > #content-inner{
+        position: relative;
+        top: -246px;
+        font-size: 13px;
+        text-align: center;
+        color:#888787;
+        background:rgba(37, 36, 37, 0.8);
+        height: 200px;
+        border: 1px solid white;
+        display: none;
+    }
+
+    #activity > ul > a > #content > #content-inner > span{
+        display: block;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 16px;
+        color:#f5d185;
+    }
+
+    #activity > ul > a > #content > span{
+        display: block;
+        color: #1da6ba;
+        position: relative;
+        left: 0px;
+        top: 28px;
+        font-size: 12px;
+    }
+
+/* --------------------------下载游戏------------------------------------------- */
+    #download{
+        margin-left: 45px;
+        width: 535px;
+        height: 340px;
+        float: left;
+        margin-bottom: 60px;
+        /* border: 1px solid red; */
+    }
+
+    #download > .download-a{
+        display: inline-block;
+        width: 390px;
+        height: 180px;
+        color:white;
+        text-align: center;
+        font-weight: 700;
+        float: left;
+        cursor: pointer;
+        background:-webkit-gradient(linear, 100% 0%, 0% 100%,from(#30bdd1), to(#15a1b2));/*谷歌*/  
+    }
+
+    .download-chinese-word{
+        margin-top: 50px;
+        font-size: 40px;
+        display: block;
+        text-shadow:1px 1px 2px white;
+        font-family:cursive;
+    }
+
+    .download-english-word{
+        font-size: 12px;
+        text-indent: 0.8rem;
+        display: block;
+        letter-spacing: 3px;
+        font-family:cursive;
+    }
+
+    #download > .novice, #download > .receive{
+        display: inline-block;
+        width: 125px;
+        height: 76px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        background:-webkit-gradient(linear, 100% 100%, 0% 0%,from(#3dd0e0), to(#73c0ca));/*谷歌*/
+    }
+
+    #download > .novice:hover, #download > .receive:hover, #download > .download-a:hover{
+        background:-webkit-gradient(linear, 100% 100%, 0% 0%,from(#4aebfd), to(#579097));/*谷歌*/
+    }
+
+    #download > .novice > span, #download > .receive > span{
+        margin-top: 2.6px;
+        line-height: 68px;
+        font-size: 14px;
+        display:inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        width: 110px;
+        height: 68px;
+    }
+
+    #download > ul{
+        list-style: none;
+        width: 535px;
+        height: 145px;
+        /* border: 1px solid blue; */
+    }
+
+    #download > ul > a > li{
+        text-align: center;
+        line-height: 60px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        width: 120px;
+        height: 60px;
+        float: left;
+        cursor: pointer;
+        background: white;
+        color:black;
+    }
+
+    #download > ul > a > li:hover{
+        box-shadow: 0 0 10px #ccc; /* 阴影边框  */
+        color:#0da0b4;
+    }
+
+/* --------------------------新英雄/新皮肤------------------------------------------- */
+    #new-hero-and-skin{
+        width:822px;
+        height: 255px;
+        margin-left: 6%;
+        float: left;
+        /* border: 1px solid red; */
+    }
+
+    #new-hero-and-skin > .new-hero, #new-hero-and-skin > .new-skin{
+        height: 255px;
+        width: 400px;
+        float: left;
+    }
+
+    #new-hero-and-skin > .new-hero{
+        background-image: url(img/new-hero.jpg);
+    }
+
+    #new-hero-and-skin > .new-skin{
+        background-image: url(img/new-skin.jpg);
+        margin-left: 21px;
+    }
+
+    #new-hero-and-skin > .new-hero > a, #new-hero-and-skin > .new-skin > a{
+        display: inline-block;
+        width: 55px;
+        height: 20px;
+        margin: 10px;
+        font-size: 15px;
+        text-align: center;
+        background: black;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        color:#f5d185;
+    }
+
+    #new-hero-and-skin > .new-hero >.new-hero-title, #new-hero-and-skin > .new-skin > .new-skin-title{
+        z-index: 2;
+        font-size: 16px;
+        color:#cdbe91;
+        font-weight: bold;
+        position: relative;
+        top: 195px;
+        left: -55px;
+    }
+
+    #new-hero-and-skin > .new-hero > .new-hero-Subtitle, #new-hero-and-skin > .new-skin > .new-skin-Subtitle{
+        display: inline-block;
+        width: 250px;
+        z-index: 2;
+        font-size: 14px;
+        color:#cfcfcf;  
+        position: relative;
+        top: 185px;
+        left: 24px;
+    }
+
+    /* 遮罩层 */
+    #new-hero-and-skin > .new-hero > .new-hero-normal, #new-hero-and-skin > .new-skin > .new-skin-normal{
+        z-index: 1;
+        width: 400px;
+        height: 130px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0),rgb(0, 0, 0));  /* div渐变色 */
+        position: relative;
+        top: 65px;
+    }
+
+    /* 显示隐藏层及里面的内容 */
+    #new-hero-and-skin > .new-hero > .new-hero-inner,  #new-hero-and-skin > .new-skin > .new-skin-inner{
+        z-index: 99;
+        display: none;
+        height: 255px;
+        width: 368dpx;
+        background: rgba(0, 0, 0, 0.6);
+        position: relative;
+        top: -190px;
+    }
+
+    #new-hero-and-skin > .new-hero > .new-hero-inner{
+        position: relative;
+        top: -190px;
+    }
+
+    #new-hero-and-skin > .new-hero > .new-hero-inner > span, #new-hero-and-skin > .new-skin > .new-skin-inner > span{
+        display: inline-block;
+        color: #cdbe91;
+        font-size: 18px;
+        margin: 20px;
+    }
+
+    #new-hero-and-skin > .new-hero > .new-hero-inner > a > input,  #new-hero-and-skin > .new-skin > .new-skin-inner > a > input{
+        width: 154px;
+        height: 42px;
+        color: #ffdb8b;
+        font-size: 15px;
+        text-align: center;
+        line-height: 42px;
+        outline: none;
+        background: rgba(0, 0, 0, 0.6);
+        border:2px solid #cdbe91;
+        cursor: pointer;
+    }
+
+    #new-hero-and-skin > .new-hero > .new-hero-inner > a > input{
+        position: relative;
+        right: 150px;
+        bottom: -190px;
+    }
+
+    #new-hero-and-skin > .new-skin > .new-skin-inner > a > input{
+        position: relative;
+        right: 130px;
+        bottom: -190px;
+    }
+
+/* --------------------------周免/西部天使/开发者日志---------------------------------------- */ 
+    #week-free{
+        margin-left: 45px;
+        width: 529px;
+        height: 255px;
+        float: left;
+        margin-bottom: 30px;
+        /* border: 1px solid red; */
+    }
+
+    /* 一 */
+    #week-free > .week-free-first{
+        display: inline-block;
+        width: 240px;
+        height: 120px;
+        background: url(img/week-free-1.jpg);
+        float: left;
+        margin-bottom: 15px;
+    }
+
+    #week-free > .week-free-first > .first-inner{
+        display: none;
+        width: 240px;
+        height: 120px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    #week-free > .week-free-first > .first-inner > a > input{
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        background: black;
+        color: #ffdb8b;
+        border: 1px solid #cdbe91;
+        position: relative;
+        top:80px;
+        left: 100px;
+        cursor: pointer;
+    }
+
+    /* 二 */
+    #week-free > .week-free-second{
+        display: inline-block;
+        width: 255px;
+        height: 180px;
+        background: url(img/week-free-2.jpg);
+        float: right;
+        margin-bottom: 16px;
+    }
+
+    #week-free > .week-free-second > .second-inner{
+        display: none;
+        width: 255px;
+        height: 180px;
+        text-align: center;
+        background: rgba(0, 0, 0,0.6);
+        font-size: 14px;
+        color: #cfcfcf;
+    }
+
+    #week-free > .week-free-second > .second-inner > span:first-child{
+        display: inline-block;
+        margin-top: 50px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        color:#cdbe91;
+    }
+
+    /* 三 */
+    #week-free > .week-free-third{
+        display: inline-block;
+        width: 240px;
+        height: 120px;
+        background: url(img/week-free-3.jpg);
+        float: left;
+    }
+
+    #week-free > .week-free-third:hover{
+        background: url(img/week-free-4.jpg);
+    }
+
+    /* 四 */
+    #week-free > .week-free-fourth{
+        width: 255px;
+        height: 60px;
+        background:-webkit-gradient(linear, 100% 100%, 0% 0%,from(#d2b58c), to(#dbb57a));/*谷歌*/
+        float: right;
+        color:white;
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+    }
+
+    #week-free > .week-free-fourth:hover{
+        background:-webkit-gradient(linear, 100% 100%, 0% 0%,from(#ffce85), to(#a88652));/*谷歌*/
+    }
+
+/* --------------------------皮肤介绍隐藏div---------------------------------------- */ 
+    #new-skin-container{
+        float: left;
+        margin-left: 6%;
+        display: none;
+        height: 120px;
+    }
+
+    #new-skin-container > ul > a > li{
+        list-style: none;
+        margin-right: 10px;
+        float: left;
+        cursor: pointer;
+    }
+
+    #new-skin-container > ul > a > li > img{
+        width: 191px;
+        height: 120px;
+    }
+
+    .free-hero{
+        width: 350px;
+        height: 150px;
+        background: white;
+        float: left;
+        margin-left: 1237px;
+        /* display: none; */
+        /* border:1px solid red; */
+    }
+
+    .free-hero > ul > a > li{
+        display:inline-block;
+        width: 35px;
+        height: 35px;
+        margin: 5px;
+        border-radius: 50px;
+    }
+
+    #new-skin-container > ul > a > li > .new-skin-1-1, .new-skin-2-2,.new-skin-3-3, .new-skin-4-4, .new-skin-5-5, .new-skin-6-6, .new-skin-7-7{
+        width: 191px;
+        height: 25px;
+        background: rgba(0, 0, 0, 0.7);
+        color: #cdbe91;
+        font-size: 12px;
+        line-height: 25px;
+        text-align: center;
+        position: relative;
+        top:-30px;
+    }
+
+/* -------------------------------赛事中心-------------------------------------------- */ 
+/* 赛事中心标题 */
+    #match-center{
+        width: 1400px;
+        height: 582px;
+        float: left;
+        margin-left: 6%;
+        margin-top: 30px;
+        margin-bottom: 35px;
+        z-index: 1;
+        /* border: 1px solid red; */
+    }
+
+    #match-center > #match-center-subtitle{
+        width: 988px;
+    }
+
+    #match-center > #match-center-subtitle > span{
+        margin-right: 60px;
+    }
+    
+    #match-center > .match-center-occupation{
+        display: inline-block;
+        width: 215px;
+        height: 35px;
+        line-height: 35px;
+        text-indent: 2rem;
+        font-size: 16px;
+        font-weight: 700;
+        color: #676767;
+        border-bottom: 1px solid #c8c9c9;
+    }
+
+    #match-center > .match-center-occupation:hover{
+        color:#1da6ba;
+        font-weight:bold;
+    }
+
+/* -----------1.春季赛常规赛--------------------------------------------------------- */
+    #match-center > ul > #match-center-div-1 > li{
+        margin-top: 10px;
+        width: 272px;
+        height: 200px;
+        list-style: none;
+        float: left;
+        background-color:#fefefe;
+        /* border: 1px solid red; */
+    }
+
+    #match-center >  ul > #match-center-div-1 > li > .match-center-li{
+        width: 272px;
+        height: 30px;
+        background-color: rgb(209, 206, 206);
+        background-image: url('img/match-center-1.png');
+        line-height: 30px;
+        color: white;
+        font-weight: 999;
+        font-size: 16px;
+        text-indent: 1rem;
+    }
+
+    #match-center >  ul > #match-center-div-1 > li > .match-center-li > span{
+        font-weight:500;
+        margin-left: 6%;
+    }
+
+    #match-center >  ul > #match-center-div-1 img{
+        width: 55px;
+    }
+
+    #match-center >  ul > #match-center-div-1 > li > .match-center-left-img,
+    #match-center >  ul > #match-center-div-1 > li > .match-center-right-img{
+        text-align: center;
+        color: #385155;
+        font-size: 18px;
+        width: 54px;
+        height: 90px;
+        float: left;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    #match-center >  ul > #match-center-div-1 > li > .match-center-score{
+        width: 80px;
+        height: 90px;
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 34px;
+        font-weight: 800;
+        color: #171717;
+        font-family: tahoma;
+        /* border: 1px solid black; */
+    }
+
+    #match-center >  ul > #match-center-div-1 > li > .match-center-score > .video-review{
+        display: inline-block;
+        width: 90px;
+        height: 29px;
+        font-size: 12px;
+        line-height: 29px;
+        font-weight: 400;
+        margin-left: -7px;
+        border: 1px solid #727272;
+        color:#727272;
+        text-align: center;
+        background: white;
+        margin-top: -100px;
+    }
+
+    #match-center >  ul > #match-center-div-1 > li > .match-center-score > .video-review:hover{
+       color:white;
+       background: #727272;
+    }
+
+    #match-center >  ul > #match-center-div-1 > li > .match-center-foot{
+        float: left;
+        width: 272px;
+        height: 40px;
+        margin-top: 10px;
+        line-height: 1.5;
+        font-size: 12px;
+        text-align: center;
+        color: #727272;
+        /* border: 1px solid #727272; */
+    }
+
+    /* 每周最佳阵容 */
+    #match-center-div-1 > #people, #match-center-div-1 > #ranking-list-title{
+        width: 844px;
+        height: 300px;
+        float: left;
+        margin-top: 30px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #0b0b0b;
+        /* border: 1px solid red; */
+    }
+
+    #match-center-div-1 > #people > span{
+        display: inline-block;
+        width: 770px;
+        height: 20px;
+    }
+
+    #match-center-div-1 > #people > div{
+        width: 154px;
+        height: 240px;
+        float: left;
+        margin-top: 30px;
+        background: white;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 500;
+        color: #424242;
+        font-size: 16px;
+        /* border: 1px solid red; */
+    }
+
+    #match-center-div-1 > #people > div > .people-img-1{
+        float: left;
+        width: 20px;
+        margin: 10px;
+    }
+
+    #match-center-div-1 > #people > div > .people-img-2{
+        margin-top: 5px;
+        margin-left: 55px;
+        float: left;
+        width: 30px;
+        /* border: 1px solid black; */
+    }
+
+    #match-center-div-1 > #people > div > .people-img-3{
+        width: 154px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0),rgb(168, 166, 166));
+        /* border: 1px solid black; */
+    }
+
+    /* 积分榜 */
+    #match-center-div-1 > #ranking-list-title > .ranking-list{
+        margin-top: 18px;
+        /* border: 1px solid red; */
+    }
+
+    #match-center-div-1 > #ranking-list-title{
+        width: 513px;
+        height: 284px;
+        float: left;
+        margin-top: 40px;
+        margin-left: 40px;
+        /* border: 1px solid red; */
+        overflow: auto;
+    }
+
+    #match-center-div-1 > #ranking-list-title > span{
+        display: inline-block;
+        width: 300px;
+    }
+
+    #match-center-div-1 > #ranking-list-title > .ranking-list > div:first-child{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        color: #151517;
+        font-size: 18px;
+        font-weight: 400;
+        background: #e0e0e0;
+    }
+    
+    #match-center-div-1 > #ranking-list-title > .ranking-list > div{
+        width: 100%;
+        height: 40px;
+        line-height:40px;
+        color: #151517;
+        font-size: 18px;
+        border-bottom: 1px solid #e0e2e2;
+        background: white;
+    }
+
+    #match-center-div-1 > #ranking-list-title > .ranking-list > div > .ranking-list-span1{
+        width: 100px;
+        margin-left: 15px;
+        display: inline-block;
+        font-size: 18px;
+        color: #7b7b7b;
+        font-family: tttgbnumber,sans-serif;
+        /* border: 1px solid red; */
+    }
+
+    #match-center-div-1 > #ranking-list-title > .ranking-list > div > .ranking-list-span2{
+        width: 163px;
+        display: inline-block;
+        font-size: 15px;
+        color: #151517;
+        font-weight: 500;
+        font-family: tahoma;
+        /* border: 1px solid red; */
+    }
+
+    #match-center-div-1 > #ranking-list-title > .ranking-list > div > .ranking-list-span2 > img{
+        display: inline-block;
+        width: 25px;
+        /* border: 1px solid  red; */
+    }
+
+    #match-center-div-1 > #ranking-list-title > .ranking-list > div > .ranking-list-span3{
+        width: 70px;
+        font-size: 16px;
+        color: #5f8d94;
+        font-weight: 500;
+        display: inline-block;
+        /* border: 1px solid red; */
+    }
+
+    #match-center-div-1 > #ranking-list-title > .ranking-list > div > .ranking-list-span4{
+        font-size: 16px;
+        color: #5f8d94;
+        margin-left: 15px;
+        font-weight: 500;
+        display: inline-block;
+        /* border: 1px solid red; */
+    }
+
+/* --------2.春季赛季后赛-------------------------------------------------------- */
+/* 空隙 */
+    #match-center-div-2 > #Gap{
+        width: 80px;
+        height: 196px;
+        margin-top: 115px;
+        border-bottom: 1px solid #c2c2c2;
+        border-top: 1px solid #c2c2c2;
+        /* background: pink; */
+        float: left;
+    }
+
+    #match-center-div-2{
+        width: 1400px;
+        height: 525px;
+        margin-top: 10px;
+        float: left;
+        /* border: 1px solid black; */
+    }
+
+    #match-center-div-2 > .round-1{
+        width: 275px;
+        height: 510px;
+        /* border: 1px solid black; */
+        float: left;
+    }
+
+    #match-center-div-2 > .round-1 > span{
+        height: 35px;
+        line-height: 35px;
+        text-align: left;
+        color: #29a2b4;
+        font-size: 16px;
+        font-weight: 700;
+        /* border: 1px solid red; */
+    }
+
+    #match-center-div-2 > .round-1 > .round-1-body{
+        width: 275px;
+        height: 190px;
+        /* border: 1px solid green; */
+        margin-bottom: 7px;
+        color: #676767;
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    #match-center-div-2 > .round-1 > .round-1-body > span{
+        float: left;
+        height: 15px;
+        line-height: 15px;
+        padding: 0 2px;
+        font-size: 12px;
+        background: #bcbcbc;
+        color: #fff;
+        border-radius: 2px;
+        margin-top: 8px;
+        margin-right: 15px;
+    }
+
+    #match-center-div-2 > .round-1 > .round-1-body > .team-div{
+        width: 245px;
+        height: 50px;
+        float: left;
+        background: white;
+        border-bottom: 1px solid #c2c2c2;
+    }
+
+    #match-center-div-2 > .round-1 > .round-1-body > .team-div > span{
+        background: white;
+        font-size: 16px;
+        color: #676767;
+        position: relative;
+        top:-8px;
+        margin-left: 17px;
+        /* background: red; */
+    }
+
+    #match-center-div-2 > .round-1 > .round-1-body > .team-sore{
+        float: left;
+        width: 28px;
+        height: 50px;
+        color: white;
+        background: #bcbcbc;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        font-family: tttgbnumber,sans-serif;
+    }
+
+    #match-center-div-2 > .round-1 > .round-1-body > .team-div > img{
+        margin-left: 12px;
+        margin-top: 10px;
+        width: 30px;
+    }
+
+/* -------------------------------英雄资料-------------------------------------------- */ 
+/* 英雄资料-标题 */
+    #hero-information{
+        width: 100%;
+        height: 625px;
+        background: #e3e2e2;
+        float: left;
+        margin-top: 50px;
+        margin-bottom: 60px;
+        /* border: 1px solid red; */
+        /* background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%); */
+    }
+
+    #hero-information > #hero-information-title{
+        width: 1400px;
+        height: 50px;
+        margin-top: 25px;
+        margin-left: 6%;
+    }
+
+    #hero-information > #hero-information-title > .title{
+        height: 35px;
+        width: 170px;
+        line-height: 35px; 
+        margin-top: 15px;
+        font-size: 24px;
+        border-left:3px solid #1da6ba;
+        float: left;
+        /* border: 1px solid red;   */
+    }
+
+    #hero-information > #hero-information-title > .hero-information-title-ul > li{
+        float: left;
+        height: 35px;
+        width: 80px;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-right: 35px;
+        color: #676767;
+        text-align: center;
+        line-height: 35px;
+        list-style: none;
+        cursor: pointer;
+    }
+
+    #hero-information > #hero-information-title > div > a{
+        margin-top: 15px;
+        margin-right: 30px;
+        width: 65px;
+        float:right;
+        height: 35px;
+        font-size: 12px;
+        color: #7ea1a6;
+        line-height: 35px;
+    }
+
+/* 英雄资料-内容 */
+    #hero-information > #hero-information-detailed{
+        margin-top: 35px;
+        margin-left: 95px;
+        width: 1400px;
+        height: 454px;
+        overflow:auto;
+        /* border: 1px solid red; */
+    }
+
+    #hero-information > #hero-information-detailed > .hero-information-detailed-ul > li > a > img{
+        width: 70px;
+    }
+
+    #hero-information > #hero-information-detailed > .hero-information-detailed-ul > li{
+        width: 97px;
+        height: 122px;
+        text-align: center;
+        list-style: none;
+        float: left;
+        font-size: 12px;
+        /* border:1px solid red; */
+    }
+
+/* -------------------------------------创作馆------------------------------------------------ */ 
+    #creative{
+        width:835px;
+        margin-left: 6%;
+        margin-bottom: 80px;
+        float: left;
+        /* border: 1px solid red; */
+    }
+
+    #creative > .creative-title{
+        height: 35px;
+        width: 240px;
+        line-height: 35px; 
+        font-size: 24px;
+        border-left:3px solid #1da6ba;
+        /* float: left; */
+    }
+
+    #creative > .creative-more{
+        float: right;
+        width: 58px;
+        height: 34px;
+        font-size: 12px;
+        line-height: 35px;
+        text-align: right;
+        color: #7ea1a6;
+        border-bottom: 1px solid #c8c9c9;
+        cursor: pointer;
+        /* border:1px solid red; */
+    }
+
+    #creative > .creative-more:hover{
+        border-bottom:2px solid #1da6ba;
+        color:#1da6ba;
+        font-weight:bold;
+    }
+
+    #creative > a > div{
+        margin-top: 15px;
+        width: 192px;
+        height: 190px;
+        background-size: cover;
+        background-position: center center;
+        /* border: 1px solid red; */
+        float: left;
+    }
+
+    #creative > a > div > div{
+        line-height: 37px;
+        margin-top: 120px;
+        width: 192px;
+        height: 70px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-indent: 1em;
+        font-size: 12px;
+        font-weight: 600;
+        display: none;
+    }
+
+    #creative > a > div > div > span{
+        width: 150px;
+        display: inline-block;
+        font-weight: 500;
+        color: #b2b2b2;
+    }
+
+/* -------------------------------用户调查/合作媒体-------------------------------------------- */ 
+    #user-survey{
+        margin-left: 40px;
+        width: 520px;
+        height: 470px;
+        float: left;
+        margin-bottom: 20px;
+        /* border: 1px solid black; */
+    }
+
+    #user-survey > a > img{
+        width: 265px;
+        float:left
+    }
+    #user-survey > ul >li{
+        color: white;
+        margin-left: 18px;
+        margin-bottom: 15px;
+        float: left;
+        list-style: none;
+    }
+
+    #user-survey > ul > li > a > img{
+        height: 90px;
+        width: 230px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #user-survey > ul >li:last-child{
+        line-height: 65px;
+        height: 65px;
+        width: 230px;
+        font-size: 19px;
+        display: block;
+        text-align: center;
+        background:-webkit-gradient(linear, 100% 100%, 0% 0%,from(#d2b58c), to(#dbb57a));/*谷歌*/
+    }
+
+    #user-survey > ul >li:last-child:hover{
+        background:-webkit-gradient(linear, 100% 100%, 0% 0%,from(#ffce85), to(#a88652));/*谷歌*/
+    }
+
+/* -------------------------------合作媒体隐藏div-------------------------------------------- */ 
+    #user-survey > ul > li > .media-div{
+        list-style: none;
+        color:black;
+        font-size: 14px;
+        display: none;
+    }
+
+    #user-survey > ul > li > .media-div > .media-ul{
+        background: white;
+        height: 270px;
+        overflow: auto;
+    } 
+
+    #user-survey > ul > li > .media-div > .media-ul > a > li{
+        line-height: 25px;
+        width: 220px;
+        height: 25px;
+        color:#676767;
+        text-indent: 1rem;
+        list-style: none;
+        color:black;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    #user-survey > ul > li > .media-div > .media-ul > a > li:hover{
+        background: rgb(223, 222, 222);
+    }
+
+/* -------------------------------底部-------------------------------------------- */ 
+    #foot{
+        float: left;
+        width: 100%;
+        height: 250px;
+        background: #e3e2e2;
+    }
+
+    #foot > #foot-middle > img{
+        float: left;
+    }
+
+    #foot > #foot-right{
+        width: 45%;
+        height: 150px;
+        color: #9f9378;
+        font-size: 12px;
+        margin-left: 30px;
+        margin-top: 55px;
+        float: left;
+        background: #e3e2e2;
+        line-height: 20px;
+    }
+
+    #foot > #foot-right > a{
+       color:#9f9378;
+    }
+
+    #foot > #foot-right > a:hover{
+       text-decoration: underline;
+    }
+/* -------------------------------侧边栏-------------------------------------------- */ 
+    #sidebar{
+        list-style: none;
+        position: fixed;
+        top: 40%;
+        right: 0px;
+        width: 66px;
+        height: 387 px;
+        background: white;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 10px;	
+    }
+
+    #sidebar > li{
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 12px;
+        width: 70px;
+        height: 60px;
+        cursor: pointer;
+    }
+
+    #sidebar > li > a{
+        color: #92a8ab;
+    }
+    
+    #sidebar > li > a:hover{
+        font-weight: 700;
+        color: #1da6ba;
+    }
+
+    #sidebar > li > a > img{
+        margin-left: 25px;
+        margin-bottom: 10px;
+        display: block;
+        position: relative;
+    }
+
+    </style>
+</head>
+<body>
+
+<!-- 头部内容 -->
+<img src="img/000.jpg" id='big-img'>
+<div id='comm-topact' name='comm-topact'>
+    <a href="Home-page.html" target='_blank'><img src="img/logo-public.png"></a>
+    <ul class='head-ul'>
+        <li>
+            <a href="https://lol.qq.com/data/info-heros.shtml">
+                <span class="head-ul-title">游戏资料</span>
+                <span class="head-ul-subtitle">GAME INFO</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://lolriotmall.qq.com/index.shtml">
+                <span class="head-ul-title">商城/合作</span>
+                <span class="head-ul-subtitle">STORE</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://lol.qq.com/act/a20180904community/page1.html">
+                <span class="head-ul-title">社区互动</span>
+                <span class="head-ul-subtitle">COMMUNITY</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://lpl.qq.com/">
+                <span class="head-ul-title">赛事官网</span>
+                <span class="head-ul-subtitle">ESPORTS</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://lol.qq.com/act/a20170515rename/">
+                <span class="head-ul-title">自助系统</span>
+                <span class="head-ul-subtitle">SYSTEM</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- 搜索/登录/手机端 -->
+<div id='head-userinfo-normal'>
+    <a href="https://lol.qq.com/search/index.shtml?order=sIdxTime&page=1&type=ALL&keyword=lol"><img src="img/6.jpg" id='img1'></a>
+    <a href="https://lol.qq.com/app/index.html"><img src="img/7.jpg" id='img2'></a>
+    <img src="img/9.jpg" id='img2-1'>
+    <a href="sign-in-page.html" target="_blank"><img src="img/8.jpg" id='img3'></a>
+    <div id='welcome' style="margin-left: 5px;">亲爱的召唤师，欢迎</div>
+    <a href="sign-in-page.html" target="_blank" id='sign' style='cursor: pointer;'>登录</a>
+
+    <div id="head-login-hover">
+        <span><br>登录并且绑定大区后才可以查看您的具体信息哦</span>
+        <span><br>(包括战绩、资产、声望)</span>
+        <span><br>官网个人信息显示略有延迟，请以游戏数据为准</span>
+        <a href="sign-in-page.html" target="_blank" id='Personal-Center'>进入个人中心 —></a>
+    </div>
+</div>
+
+<!-- 查看详情 -->
+<div id="top-act-link">
+    <a href="https://lol.qq.com/act/a20200723spiritblossom/index.html?e_code=507041"><span>查看详情</span></a>
+</div>
+
+<!-- 历史版本 -->
+<div id='top-version'>
+    当前游戏版本：<span>Ver10.13</span>
+    <div id="top-version-link">
+        <a href="http://lol.qq.com/gicp/news/410/31791235.html"><span>版本详情</span></a>
+    </div>
+</div>
+
+<!-- 遮罩层 -->
+<div id='head-normal'></div>
+<!-- 隐藏div -->
+<div class='head-nav-sub-inner'>
+    <ul style="margin-left: 370px;">
+        <li><a href="https://lol.qq.com/download.shtml?ADTAG=innercop.lol.web.top">游戏下载</a></li>
+        <li><a href="https://lol.qq.com/data/newbie-what.shtml">新手指导</a></li>
+        <li><a href="https://lol.qq.com/data/info-heros.shtml">资料库</a></li>
+        <li><a href="https://lol.qq.com/tft/#/intro">云顶之弈</a></li>
+        <li><a href="https://101.qq.com/?ADTAG=cooperation.glzx.web">攻略中心</a></li>
+        <li><a href="https://lol.qq.com/nexus/pc/?chanid=127">开发者基地</a></li>
+        <li><a href="https://lol.qq.com/act/a20171205hextech/">海克斯战利品库</a></li>
+        <li><a href="https://yz.lol.qq.com/zh_CN/">英雄联盟宇宙</a></li>
+    </ul>
+    <ul>
+        <li><a href="https://lol.qq.com/comm-htdocs/pay/new_index.htm?t=lol">点券充值</a></li>
+        <li><a href="https://daoju.qq.com/lol/">道具城</a></li>
+        <li><a href="https://lolriotmall.qq.com/index.shtml?ADTAG=lol.rk.gw.top&adunionsid=gwtop">周边商城</a></li>
+        <li><a href="https://lol.qq.com/act/a20161011mvm/index.htm">LOL桌游</a></li>
+        <li><a href="https://lpl.qq.com/es/act/a20170731cmb/">LOL信用卡</a></li>
+        <li><a href="https://cafe.qq.com/tpl/lol/index.html">网吧特权</a></li>
+        <li><a href="https://lol.qq.com/act/a20181124novel/?ADTAG=innercop.lol.web.top">电竞小说</a></li>
+    </ul>
+    <ul>
+        <li><a href="https://lol.qq.com/act/a20180904community/page1.html">官方社区</a></li>
+        <li><a href="https://lol.qq.com/v/v2/index.shtml">视频中心</a></li>
+        <li><a href="https://bbs.lol.qq.com/forum.php">官方论坛</a></li>
+        <li><a href="https://lol.qq.com/act/a20160425wxlol/">官方微信</a></li>
+        <li><a href="https://weibo.com/login.php">官方微博</a></li>
+        <li><a href="https://tr.lol.qq.com/">玩家创作观</a></li>
+        <li><a href="https://kol.qq.com/">作者入驻计划</a></li>
+        <li><a href="https://lol.qq.com/act/a20180418yxny/">玩家服务</a></li>
+    </ul>
+    <ul>
+        <li><a href="https://lpl.qq.com/es/lpl/2020/">LPL职业联赛</a></li>
+        <li><a href="https://lpl.qq.com/es/ldl/2020/">LDL发展联赛</a></li>
+        <li><a href="https://lpl.qq.com/es/worlds/2019/index.html">全球总决赛</a></li>
+        <li><a href="https://lpl.qq.com/act/a20191127allstar/index.html">全明星赛</a></li>
+        <li><a href="https://lpl.qq.com/es/msc/2020/">季中杯</a></li>
+        <li><a href="https://lpl.qq.com/act/a20191125dmcup/index.html">德玛西亚杯</a></li>
+        <li><a href="https://lpl.qq.com/es/lcl/2020/index.html">全国高校联赛</a></li>
+    </ul>
+    <ul>
+        <li><a href="https://kf.qq.com/product/lol.html?pc_scene=web">联系客服</a></li>
+        <li><a href="https://lol.qq.com/act/a20170608transferzone/index.html?ADTAG=innercop.lol.web.top">转区系统</a></li>
+        <li><a href="https://lol.qq.com/act/a20151118fh/">封号查询</a></li>
+        <li><a href="https://lol.qq.com/act/a20200227logout/">账号注销</a></li>
+        <li><a href="https://lol.qq.com/act/a20190528lolscore/">信誉分系统</a></li>
+        <li><a href="https://lol.qq.com/act/a20150326dqpd/">服务器状态查询</a></li>
+        <li><a href="https://lol.qq.com/act/a20171108ambient/index.html">秩序殿堂</a></li>
+        <li><a href="https://lol.qq.com/act/a20191210super/index.shtml">峡谷之巅</a></li>
+    </ul>
+</div>
+
+<!-- 首页内容  -->
+<div id='Home-page-content'>
+    <!-- 轮播图 -->
+    <div class='promo'>
+        <div class='promo-1'>
+            <a href="https://lol.qq.com/act/a20200723blossomchest/index.html?e_code=500130" style="background: url(img/1.jpeg);"></a>
+            <a href="https://lol.qq.com/act/a20200723spiritblossom/index.html?e_code=500131"  style="background: url(img/2.jpeg);"></a>
+            <a href="https://lol.qq.com/act/a20200723spiritblossom/pass.html?e_code=500132"  style="background: url(img/3.jpeg);"></a>
+            <a href="https://lpl.qq.com/es/lpl/2020/?e_code=500133"  style="background: url(img/4.jpeg);"></a>
+            <a href="https://lpl.qq.com/act/a20200429match/page1.html?e_code=500134"  style="background: url(img/5.jpeg);"></a>
+        </div>
+        <div class='promo-2'>
+            <input type="button" value="绽灵花开之礼" style="color:#ab8e66;background-color:#f7f6f6;border-bottom: 2px #cea861 solid">
+            <input type="button" value="灵魂莲华2020">
+            <input type="button" value="灵魂莲华2020通行证">
+            <input type="button" value="7月23日LPL赛程">
+            <input type="button" value="云顶之弈公开赛">
+        </div>
+    </div>
+
+    <!-- 新闻 -->
+    <div class='r-promo'>
+        <ul class="part-ul-title">
+            <li style="margin-right:65px;color: #1da6ba;font-weight: bold;">综合</li>
+            <li style="margin-right:65px;">公告</li>
+            <li>赛事</li>
+            <li style="margin-left:65px;">攻略</li>
+            <li style="margin-left:65px;">社区</li>
+        </ul>
+        <a href="https://lol.qq.com/act/a20200626lucky/index.html?docid=15998195233830277524" style="display: block;"><b>幸运一夏赢龙的传人 李青 见龙在田</b></a>
+        <a href="https://lol.qq.com/news/detail.shtml?docid=8394334515208474538" style="display: none;"><b>泳池派对2020现已开启</b></a>
+        <a href="https://lol.qq.com/v/v2/detail.shtml?docid=4212677861653074041" style="display: none;"><b>英雄麦克疯：缜密思路造就不败金身，全胜滔搏势</b></a>
+        <a href="https://lol.qq.com/news/detail.shtml?docid=11683151068853094671" style="display: none;"><b>团战时期ADC到底应该如何站位，打谁才是首要</b></a>
+        <a href="https://www.dadianjing.cn/info/48760.html?docid=6827360182686813266" style="display: none;"><b>外国网友看LPL-TES EDG：生活似乎对“淀粉”</b></a>
+        <div class='part-ul-content'>
+            <!-- 综合 -->
+            <ul style="display: block;">
+                <li><div class='xwen'>新闻</div><a href="https://lol.qq.com/news/detail.shtml?docid=8394334515208474538">泳池派对2020现已开启</a><span>06-23</span></li>
+                <li><div class='ggao'>公告</div><a href="https://lol.qq.com/news/detail.shtml?docid=9309559812855113576">关于开放冠军杯赛不限量测试的公告</a><span>06-20</span></li>
+                <li><div class='sping'>视频</div><a href="https://lol.qq.com/v/v2/detail.shtml?docid=103807286796765802">给自己放个假！峡谷海滨度假等你出发！</a><span>06-25</span></li>
+                <li><div class='xwen'>新闻</div><a href="https://lol.qq.com/news/detail.shtml?docid=13626805041991976652">【入圈有礼】100份Q币礼包大派送</a><span>06-24</span></li>
+                <li><div class='sping'>视频</div><a href="hhttps://lol.qq.com/v/v2/detail.shtml?docid=12176404362958963153">轻装上阵嗨翻夏日 2020泳池派对开始</a><span>06-24</span></li>
+                <li><div class='ggao'>公告</div><a href="http://lol.qq.com/gicp/news/410/31791235.html?docid=12795953497911157690">13版本更新公告：泳池派对皮肤清凉一夏</a><span>06-23</span></li>
+            </ul>
+            <!-- 公告 -->
+            <ul>
+                <li><div class='ggao'>公告</div><a href="https://lol.qq.com/news/detail.shtml?docid=2786896027303154198">关于召唤师峡谷平衡性漏洞的说明</a><span>06-19</span></li>
+                <li><div class='ggao'>公告</div><a href="https://lol.qq.com/news/detail.shtml?docid=3857344175978769220">泳池派对2020专题页面错误更正公告</a><span>06-24</span></li>
+                <li><div class='xwen'>新闻</div><a href="https://lol.qq.com/act/a20200421weekfree/index.html?docid=11322396674856129839">6月26日免费英雄更新公告</a><span>06-24</span></li>
+                <li><div class='ggao'>公告</div><a href="http://lol.qq.com/gicp/news/410/31791235.html?docid=12795953497911157690">10.13版本更新公告：泳池派对皮肤清凉一夏</a><span>06-23</span></li>
+                <li><div class='ggao'>公告</div><a href="http://lol.qq.com/gicp/news/662/31791263.html?docid=6729575554284216126">10.13云顶之弈更新：装备限持星系来袭！</a><span>06-23</span></li>
+                <li><div class='ggao'>公告</div><a href="https://lol.qq.com/news/detail.shtml?docid=9309559812855113576">关于开放冠军杯赛不限量测试的公告</a><span>06-20</span></li>
+            </ul>
+            <!-- 赛事 -->
+            <ul>
+                <li><div class='yle'>娱乐</div><a href="https://lol.qq.com/news/detail.shtml?docid=9654154481542312990">谁能阻止TES？IG与FPX可能性最大 但要满足这几...</a><span>06-27</span></li>
+                <li><div class='sping'>视频</div><a href="https://lol.qq.com/v/v2/detail.shtml?docid=254601061968744290">英雄麦克疯：IG发育型上单回归黑暗势力喜提首胜</a><span>06-27</span></li>
+                <li><div class='sping'>视频</div><a href="https://lol.qq.com/v/v2/detail.shtml?docid=9665605422575087111">我是选手：正义巨像，英雄登场</a><span>06-27</span></li>
+                <li><div class='sping'>视频</div><a href="https://lol.qq.com/v/v2/detail.shtml?docid=6740299057922833432">选手靠谱时刻：knight和369采访秀恩爱？</a><span>06-27</span></li>
+                <li><div class='xwen'>新闻</div><a href="https://lol.qq.com/news/detail.shtml?docid=6686085271757440092">重磅！亚奥理事会与国际电子竞技联合会达成战略...</a><span>06-27</span></li>
+                <li><div class='yle'>娱乐</div><a href="https://lol.qq.com/news/detail.shtml?docid=9405799436311725229">FPX拒绝连败！SN志在两连胜</a><span>06-27</span></li>
+            </ul>
+            <!-- 攻略 -->
+            <ul>
+                <li><div class='sping'>视频</div><a href="https://lol.qq.com/v/v2/detail.shtml?docid=9344781319092582532">云顶之弈10.12高效上分阵容，一套源计划，轻松...</a><span>06-23</span></li>
+                <li><div class='jxue'>教学</div><a href="https://lol.qq.com/news/detail.shtml?docid=8929839599932047422">左手六剑 右手六法——剑圣锐雯引领云顶10.12...</a><span>06-20</span></li>
+                <li><div class='jxue'>教学</div><a href="https://lol.qq.com/news/detail.shtml?docid=5253086613782716854">10.12版本改动浅析 带上疾跑去征服世界吧！</a><span>06-20</span></li>
+                <li><div class='jxue'>教学</div><a href="https://www.chaofan.com/news/lg5sjswsk8wnhke.html?docid=6671447800094168045">【排位黑科技】全能石是解开艾克封印的钥匙？</a><span>06-19</span></li>
+                <li><div class='jxue'>教学</div><a href="http://l.zhangyoubao.com/news/3339809117998423987?docid=11724404719198451907/">高分段亦可快速上分：源计划新理解助你冠绝云顶</a><span>06-19</span></li>
+                <li><div class='sping'>视频</div><a href="https://lol.qq.com/v/v2/detail.shtml?docid=6489839596945476356">最新SSS级吃分阵容抢先看！10.12最稳上分阵容！</a><span>06-18</span></li>
+            </ul>
+            <!-- 社区 -->
+            <ul>
+                <li><div class='sshi'>赛事</div><a href="https://www.dadianjing.cn/info/48758.html?docid=16852423123769537227">6月27日LPL海报：SN“画龙点睛”DMO“训狮表演”</a><span>06-27</span></li>
+                <li><div class='sshi'>赛事</div><a href="https://lol.qq.com/news/detail.shtml?docid=565060660554638483">外国网友看LPL-iG V5：TS每一局都在上路开棋牌室</a><span>06-26</span></li>
+                <li><div class='sshi'>赛事</div><a href="https://lol.qq.com/news/detail.shtml?docid=11827627702958251362">不破不立！既然Tian的“拙”藏不住 FPX何不下一...</a><span>06-26</span></li>
+                <li><div class='sshi'>赛事</div><a href="https://www.scoregg.com/p/1155900?iframe=qq&docid=3470406989928267580">神评：什么时候来个周淑怡Rita鼓鼓同台？</a><span>06-26</span></li>
+                <li><div class='yle'>娱乐</div><a href="https://www.chaofan.com/news/lorsqsosyk6kszl.html?docid=15471214025682806109">LPL排位日记：左手尝试开发安妮 Junjia苦练雪人？</a><span>06-25</span></li>
+                <li><div class='sshi'>赛事</div><a href="https://www.scoregg.com/p/1155644?iframe=qq&docid=14763944423218236164">[里程碑] LNG.Duan个人LPL助攻数达到2000</a><span>06-24</span></li>
+            </ul>
+            <a href="https://lol.qq.com/news/index.shtml">
+                <div class='part-ul-div'>阅读更多<span> 最新资讯 —></span></div>
+            </a>
+        </div>
+    </div>
+
+<!-- 热门活动 -->
+<div id='activity' name='activity'>
+    <div id='activity-hot'>&nbsp;热门活动</div>
+    <div id='underway'>
+        <span style="border-bottom:2px solid #1da6ba;color:#1da6ba;font-weight:bold;">正在进行</span>
+        <span>商城特惠</span><span>长期活动</span>
+    </div>
+    <a href="https://lol.qq.com/activity/index.shtml" id='activity-more'>更多.-></a><br><br>
+<!-- 正在进行 -->
+<ul>
+    <a href="https://lol.qq.com/act/a20200723spiritblossom/pass.html?e_code=500135">
+        <div id='content' style="margin-left: 3px;">
+            <img src="img/hot1.jpg" alt="灵魂莲华2020通行证">
+            &nbsp;&nbsp;灵魂莲华2020通行证<span>&nbsp;33天后结束</span>
+            <div id='content-inner'><span>灵魂莲华2020通行证</span>完成里程碑任务解锁海量奖励<br>2020-07-23 - 2020-08-25</div>
+        </div>
+    </a>
+    <a href="https://lpl.qq.com/act/a20200429match/page1.html?e_code=500135">
+        <div id='content' style="margin-left: 21px;">
+            <img src="img/hot2.jpg" alt="云顶之弈公开课">
+            &nbsp;&nbsp;云顶之弈公开课<span>&nbsp;3天后结束</span>
+            <div id='content-inner'><span>云顶之弈公开课</span>英雄一决云顶<br>2020-07-3 - 2020-07-26</div>
+        </div>
+    </a>
+    <a href="https://lolriotmall.qq.com/act/a20200723spiritblossom/index.html?e_code=500135">
+        <div id='content' style="margin-left: 21px;">
+            <img src="img/hot3.jpg" alt="灵魂莲华周边">
+            &nbsp;&nbsp;灵魂莲华周边<span>&nbsp;31天后结束</span>
+            <div id='content-inner'><span>灵魂莲华周边</span>灵魂莲华皮肤同款周边盛放上新。<br>2020-07-23 - 2020-08-23</div>
+        </div>
+    </a>
+    <a href="https://lol.qq.com/act/a20200723blossomchest/index.html?e_code=500135">
+        <div id='content' style="margin-left: 22px;">
+            <img src="img/hot4.jpg" alt="绽灵开花之礼">
+            &nbsp;&nbsp;绽灵开花之礼<span>&nbsp;34天后结束</span>
+            <div id='content-inner'><span>绽灵开花之礼</span>开启宝箱赢珍惜限定皮肤<br>2020-07-23 - 2020-08-26</div>
+        </div>
+    </a>
+</ul>
+<!-- 商城特惠 -->
+<ul style="display: none;">
+    <a href="https://lol.qq.com/act/a20200310blackfrost/index.html">
+        <div id='content' style="margin-left: 3px;">
+            <img src="img/hot5.jpg" title="黯星2020">
+            &nbsp;&nbsp;黯星2020<span>&nbsp;长期活动</span>
+            <div id='content-inner'><span>黯星2020</span>全新皮肤和炫彩上线<br>开启时间：2020-03-10</div>
+        </div>
+    </a>
+    <a href="https://lol.qq.com/act/a20171205hextech/?e_code=500135">
+        <div id='content' style="margin-left: 21px;">
+            <img src="img/hot6.jpg" title="奥术师 佐伊 至臻">
+            &nbsp;&nbsp;奥术师 佐伊 至臻<span>&nbsp;190天后结束</span>
+            <div id='content-inner'><span>奥术师 佐伊 至臻</span>100至臻点(2020)兑换<br>2020-07-10 - 2021-01-29</div>
+        </div>
+    </a>
+    <a href="https://lol.qq.com/act/a20190909starguardian/index.html?e_code=489818#nav6">
+        <div id='content' style="margin-left: 21px;">
+            <img src="img/hot7.jpg" title="小小英雄第四系列">
+            &nbsp;&nbsp;小小英雄第四系列<span>&nbsp;长期活动</span>
+            <div id='content-inner'><span>小小英雄第四系列</span>软软、小志、团长，向你报到！<br>开启时间：2019-08-20</div>
+        </div>
+    </a>
+    <a href="https://lol.qq.com/act/a20200723spiritblossom/index.html?e_code=500135">
+        <div id='content' style="margin-left: 22px;">
+            <img src="img/hot8.jpg" title="灵魂莲华2020">
+            &nbsp;&nbsp;灵魂莲华2020<span>&nbsp;33天后结束</span>
+            <div id='content-inner'><span>灵魂莲华2020</span>花落绽灵之境<br>2020-07-23 - 2020-08-25</div>
+        </div>
+    </a>
+</ul>
+<!-- 长期活动 -->
+<ul style="display: none;">
+    <a href="https://lol.qq.com/act/a20200319clash/index.html?e_code=500135">
+        <div id='content' style="margin-left: 3px;">
+            <img src="img/hot9.jpg" title="LOL组队专区">
+            &nbsp;&nbsp;LOL组队专区<span>&nbsp;长期活动</span>
+            <div id='content-inner'><span>LOL组队专区</span>无兄弟、不游戏：兄弟没空？何不妨多找几个，一起组站召唤师峡谷~冲鸭！<br>开启时间：2020-07-21</div>
+        </div>
+    </a>
+    <a href="https://lol.qq.com/act/a20200529eternals/index.html?e_code=500135">
+        <div id='content' style="margin-left: 21px;">
+            <img src="img/hot10.jpg" title="英雄联盟：永恒星碑">
+            &nbsp;&nbsp;英雄联盟：永恒星碑<span>&nbsp;长期活动</span>
+            <div id='content-inner'><span>英雄联盟：永恒星碑</span>即刻解锁，记录你的英雄精彩时刻<br>开启时间：20120-05-29</div>
+        </div>
+    </a>
+    <a href="https://lolriotmall.qq.com/act/a20200113LPL/index.html?ADTAG=lolriotmall.pc.lolhdzx.ad">
+        <div id='content' style="margin-left: 21px;">
+            <img src="img/hot11.jpg" title="LPL X NIKE联名队服">
+            &nbsp;&nbsp;LPL X NIKE联名队服<span>&nbsp;长期活动</span>
+            <div id='content-inner'><span>LPL X NIKE联名队服</span>选手同款，LPL X NIKE联名队服已上线<br>2020-01-13</div>
+        </div>
+    </a>
+    <a href="https://lol.qq.com/act/a20190528lolscore/?e_code=489313">
+        <div id='content' style="margin-left: 22px;">
+            <img src="img/hot12.jpg" title="英雄联盟信誉分查询">
+            &nbsp;&nbsp;英雄联盟信誉分查询<span>&nbsp;长期活动</span>
+            <div id='content-inner'><span>英雄联盟信誉分查询</span>希望各位玩家保持良好游戏行为，一起营造健康的游戏环境！<br>2019-09-09</div>
+        </div>
+    </a>
+</ul>
+</div>
+<!-- 下载游戏 -->
+<div id='download'>
+    <a href="https://lol.qq.com/download.shtml?ADTAG=lolweb.v3" class='download-a'>
+        <span class='download-chinese-word'>下载游戏</span>
+        <span class='download-english-word'>DOWNLOAD THE GAME</span>
+    </a>
+    <a href="https://lol.qq.com/act/a20181228bootcamp/index.html" class='novice'><span>◇新手必备◇</span></a>
+    <a href="https://lol.qq.com/act/a20180929awards/index.html?ADTAG=lolweb.v3#box2" class='receive'><span>◇领取中心◇</span></a>
+    <ul>
+        <a href="https://kf.qq.com/product/lol.html?pc_scene=web"><li style="margin-right: 17px;">在线客服</li></a>
+        <a href="https://lol.qq.com/act/a20171108ambient/index.html"><li style="margin-right: 17px;">秩序殿堂</li></a>
+        <a href="https://lol.qq.com/data/info-heros.shtml"><li style="margin-right: 16px;">游戏资料</li></a>
+        <a href="https://lol.qq.com/act/a20191210super/index.shtml"><li>峡谷之巅</li></a>
+        <a href="https://lol.qq.com/tft/#/intro"><li style="margin-right: 17px;">云顶之弈</li></a>
+        <a href="https://101.qq.com/?ADTAG=cooperation.glzx.web"><li style="margin-right: 17px;">攻略中心</li></a>
+        <a href="https://yz.lol.qq.com/zh_CN/"><li style="margin-right: 16px;">LOL宇宙</li></a>
+        <a href="https://lol.qq.com/act/a20190507lolbdzx/index.html"><li>微信绑定</li></a>
+    </ul>
+</div>
+
+<!-- 新英雄/新皮肤 -->
+<div id="new-hero-and-skin">
+    <div class='new-hero'>
+        <a>新英雄</a>
+        <span class='new-hero-title'>新英雄原画技能抢先看！</span>
+        <span class='new-hero-Subtitle'>含羞蓓蕾 莉莉娅</span>
+        <!-- 遮罩层 -->
+        <div class='new-hero-normal'></div>
+        <!-- 隐藏div -->
+        <div class='new-hero-inner'>
+            <span>含羞蓓蕾 莉莉娅</span><a href="http://lol.qq.com/act/a20200710lillia/"><input type="button" value="查看详情 →"></a>
+        </div>
+    </div>
+
+    <div class='new-skin'>
+        <a>新皮肤</a>
+        <span class='new-skin-title'>花落绽灵之境</span>
+        <span class='new-skin-Subtitle'>灵魂莲华2020</span>
+        <!-- 遮罩层 -->
+        <div class='new-skin-normal'></div>
+        <!-- 隐藏div -->
+        <div class='new-skin-inner'>
+            <span>灵魂莲华2020</span><a href="https://lol.qq.com/act/a20200723spiritblossom/index.html"><input type="button" value="查看详情 →"></a>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- 周免/西部天使/开发者日志 -->
+<div id='week-free'>
+    <div class='week-free-first'>
+        <div class='first-inner'>
+            <a href="http://lol.qq.com/gicp/news/410/32103522.html"><input type="button" value="查看详情"></a>
+        </div>
+    </div>
+    
+    <a href="http://lol.qq.com/nexus/pc/detail.html?tagtype=128&docid=6530368015223503791" class='week-free-second'>
+        <div class='second-inner'>
+            <span>/开发者：平衡新英雄的新思路</span><br><span>我们将从长期角度考虑新英雄与大型更新的平衡。</span>
+        </div>
+    </a>
+    <a href="https://lol.qq.com/act/a20200721yone/index.html" class='week-free-third'></a>
+    <div class='week-free-fourth'>◇ 周免→ ◇</div>
+</div>
+
+<!--周免 -->
+<div class='free-hero'>
+    <ul>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=6" title="厄加特"><li style="background-image: url(img/hero/ejiate.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=11" title="易"><li style="background-image: url(img/hero/jiansheng.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=13" title="瑞兹"><li style="background-image: url(img/hero/liulang.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=17" title="提莫"><li style="background-image: url(img/hero/timo.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=22" title="艾希"><li style="background-image: url(img/hero/hanbing.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=23" title="泰达米尔"><li style="background-image: url(img/hero/manwang.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=69" title="卡西奥佩妮"><li style="background-image: url(img/hero/shenv.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=85" title="凯南"><li style="background-image: url(img/hero/kainan.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=86" title="盖伦"><li style="background-image: url(img/hero/gailun.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=115" title="吉格斯"><li style="background-image: url(img/hero/zhadanren.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=117" title="璐璐"><li style="background-image: url(img/hero/lulu.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=121" title="卡兹克"><li style="background-image: url(img/hero/tanglang.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=126" title="杰斯"><li style="background-image: url(img/hero/jiesi.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=133" title="奎因"><li style="background-image: url(img/hero/kuiyin.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=154" title="扎克"><li style="background-image: url(img/hero/zhake.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=201" title="布隆"><li style="background-image: url(img/hero/bulong.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=236" title="卢锡安"><li style="background-image: url(img/hero/luxian.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=427" title="艾翁"><li style="background-image: url(img/hero/cuishen.png);background-size: 35px;"></li></a>
+        <a href="https://lol.qq.com/data/info-defail.shtml?id=517" title="塞拉斯"><li style="background-image: url(img/hero/sailasi.png);background-size: 35px;"></li></a>
+    </ul>
+</div>
+
+<!-- 皮肤介绍隐藏div -->
+<div id='new-skin-container'>
+    <ul>
+        <a href="https://lol.qq.com/act/a20200526astronaut/index.html">
+            <li class='new-skin-1'>
+                <img src="img/new-skin-1.jpg"><div class='new-skin-1-1'>宇航员2020</div>
+            </li>
+        </a>
+        <a href="https://lol.qq.com/act/a20200424fpxskin/index.html">
+            <li class='new-skin-2'>
+                <img src="img/new-skin-2.jpg"><div class='new-skin-2-2'>FPX冠军皮肤</div>
+            </li>
+        </a>
+        <a href="https://lol.qq.com/act/a20200415fpxpreorder/index.html">
+            <li class='new-skin-3'>
+                <img src="img/new-skin-3.jpg"><div class='new-skin-3-3'>FPX浴火涅槃大礼包</div>
+            </li>
+        </a>
+        <a href="https://lol.qq.com/act/a20200417coven/index.html">
+            <li class='new-skin-4'>
+                <img src="img/new-skin-4.jpg"><div class='new-skin-4-4'>魔女2020</div>
+            </li>
+        </a>
+        <a href="https://lol.qq.com/act/a20200407worldbreaker/index.html">
+            <li class='new-skin-5'>
+                <img src="img/new-skin-5.jpg"><div class='new-skin-5-5'>创世魔神2020</div>
+            </li>
+        </a>
+        <a href="https://lol.qq.com/act/a20200402aprilfool/index.html">
+            <li class='new-skin-6'>
+                <img src="img/new-skin-6.jpg"><div class='new-skin-6-6'>愚人节2020</div>
+            </li>
+        </a>
+        <a href="https://lol.qq.com/act/a20200329rpg/index.html">
+            <li class='new-skin-7' style="float: right;margin-right: 0px;">
+                <img src="img/new-skin-7.jpg"><div class='new-skin-7-7'>峡谷勇者2020</div>
+            </li>
+        </a>
+    </ul>
+</div>
+
+<!-- 赛事中心 -->
+<div id='match-center'>
+    <div id='match-center-title'>&nbsp;赛事中心</div>
+    <div id='match-center-subtitle'>
+        <span style="border-bottom:2px solid #1da6ba;color:#1da6ba;font-weight:bold;">春季赛常规赛</span>
+        <span>春季赛季后赛</span><span>夏季赛常规赛</span>
+    </div>
+    <a href="https://lpl.qq.com/es/lpl/2020/" class='match-center-occupation'>2020英雄联盟职业联赛</a>
+    <a href="https://lpl.qq.com/" id='match-center-more'>更多.-></a><br><br>
+<!-- 春季赛常规赛 -->
+<ul>
+    <div id='match-center-div-1' class="show1">
+        <li style="margin-right: 10px;">
+            <div class='match-center-li'>已结束 <span>4-19 &nbsp;&nbsp;17:00</span></div>
+
+            <div class='match-center-left-img'><img src='img/WE.png'>WE</div>
+            <div class='match-center-score'>2：1<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36240" class='video-review'>视频回顾</a></div>
+            <div class='match-center-right-img'><img src='img/EDG.png'>EDG</div>
+            <div class='match-center-foot'>2020职业联赛<br>春季赛常规赛 第七周 BO3</div>
+        </li>
+
+        <li style="margin-right: 10px;">
+            <div class='match-center-li'>已结束 <span>4-19 &nbsp;&nbsp;19:00</span></div>
+
+            <div class='match-center-left-img'><img src='img/IG.png'>IG</div>
+            <div class='match-center-score'>2：1<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36247" class='video-review'>视频回顾</a></div>
+            <div class='match-center-right-img'><img src='img/LNG.png'>LNG</div>
+            <div class='match-center-foot'>2020职业联赛<br>春季赛常规赛 第七周 BO3</div>
+        </li>
+
+        <li style="margin-right: 10px;">
+            <div class='match-center-li'>已结束 <span>4-20 &nbsp;&nbsp;15:00</span></div>
+
+            <div class='match-center-left-img'><img src='img/RW.png'>RW</div>
+            <div class='match-center-score'>2：1<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36255" class='video-review'>视频回顾</a></div>
+            <div class='match-center-right-img'><img src='img/LGD.png'>LGD</div>
+            <div class='match-center-foot'>2020职业联赛<br>春季赛常规赛 第B八周 BO3</div>
+        </li>
+
+        <li style="margin-right: 10px;">
+            <div class='match-center-li'>已结束 <span>4-20 &nbsp;&nbsp;17:00</span></div>
+
+            <div class='match-center-left-img'><img src='img/WE.png'>WE</div>
+            <div class='match-center-score'>2：1<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36263" class='video-review'>视频回顾</a></div>
+            <div class='match-center-right-img'><img src='img/OMG.png'>OMG</div>
+            <div class='match-center-foot'>2020职业联赛<br>春季赛常规赛 第八周 BO3</div>
+        </li>
+
+        <li style="margin-right: 0px;">
+            <div class='match-center-li'>已结束 <span>4-20 &nbsp;&nbsp;19:00</span></div>
+
+            <div class='match-center-left-img'><img src='img/FPX.png'>FPX</div>
+            <div class='match-center-score'>2：1<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36266" class='video-review'>视频回顾</a></div>
+            <div class='match-center-right-img'><img src='img/TES.png'>TES</div>
+            <div class='match-center-foot'>2020职业联赛<br>春季赛常规赛 第八周 BO3</div>
+        </li>
+<!-- 每周最佳阵容 -->
+        <div id='people'><span>每周最佳阵容</span>
+            <div style="margin-right: 18px;">
+                <img src="img/top.png" class='people-img-1'>
+                <img src='img/TES.png' class='people-img-2'>
+                <img src='img/369.png' class='people-img-3'>
+                369
+            </div>
+            <div style="margin-right: 17px;">
+                <img src="img/wild.png" class='people-img-1'>
+                <img src='img/IG.png' class='people-img-2'>
+                <img src='img/Ning.png' class='people-img-3'>
+                Ning
+            </div>
+            <div style="margin-right: 17px;">
+                <img src="img/mid.png" class='people-img-1'>
+                <img src='img/IG.png' class='people-img-2'>
+                <img src='img/Rookie.png' class='people-img-3'>
+                Rookie
+            </div>
+            <div style="margin-right: 17px;">
+                <img src="img/lower.png" class='people-img-1'>
+                <img src='img/TES.png' class='people-img-2'>
+                <img src='img/JackeyLove.png' class='people-img-3'>
+                JackeyLove
+            </div>
+            <div>
+                <img src="img/auxiliary.png" class='people-img-1'>
+                <img src='img/RNG.png' class="people-img-2">
+                <img src='img/Ming.png' class='people-img-3'>
+                Ming
+            </div>
+        </div>
+<!--积分表 -->
+        <div id='ranking-list-title'><span>积分表</span>
+            <div class='ranking-list'>
+                <div>
+                    <span style="color:#151517;margin-left: 15px;display: inline-block;width: 100px;">排名</span>
+                    <span style="display: inline-block;width: 120px;">俱乐部</span>
+                    <span style="margin-left: 45px;display: inline-block;width: 50px;">胜负</span>
+                    <span style="margin-left: 29px;display: inline-block;">积分</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>1</span>
+                    <span class='ranking-list-span2'><img src='img/IG.png'> IG</span>
+                    <span class='ranking-list-span3'>14/2</span>
+                    <span class='ranking-list-span4'>14</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>2</span>
+                    <span class='ranking-list-span2'><img src='img/JDG.png'> JDG</span>
+                    <span class='ranking-list-span3'>12/2</span>
+                    <span class='ranking-list-span4'>12</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>3</span>
+                    <span class='ranking-list-span2'><img src='img/FPX.png'> FPX</span>
+                    <span class='ranking-list-span3'>12/4</span>
+                    <span class='ranking-list-span4'>12</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>4</span>
+                    <span class='ranking-list-span2'><img src='img/TES.png'> TES</span>
+                    <span class='ranking-list-span3'>11/5</span>
+                    <span class='ranking-list-span4'>11</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>5</span>
+                    <span class='ranking-list-span2'><img src='img/ES.png'> ES</span>
+                    <span class='ranking-list-span3'>11/5</span>
+                    <span class='ranking-list-span4'>11</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>6</span>
+                    <span class='ranking-list-span2'><img src='img/EDG.png'> EDG</span>
+                    <span class='ranking-list-span3'>9/7</span>
+                    <span class='ranking-list-span4'>9</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>7</span>
+                    <span class='ranking-list-span2'><img src='img/RNG.png'> RNG</span>
+                    <span class='ranking-list-span3'>8/8</span>
+                    <span class='ranking-list-span4'>8</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>8</span>
+                    <span class='ranking-list-span2'><img src='img/WE.png'> WE</span>
+                    <span class='ranking-list-span3'>8/8</span>
+                    <span class='ranking-list-span4'>8</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>9</span>
+                    <span class='ranking-list-span2'><img src='img/VG.png'> VG</span>
+                    <span class='ranking-list-span3'>7/9</span>
+                    <span class='ranking-list-span4'>7</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>10</span>
+                    <span class='ranking-list-span2'><img src='img/BLG.png'> BLG</span>
+                    <span class='ranking-list-span3'>7/9</span>
+                    <span class='ranking-list-span4'>7</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>11</span>
+                    <span class='ranking-list-span2'><img src='img/SN.png'> SN</span>
+                    <span class='ranking-list-span3'>7/9</span>
+                    <span class='ranking-list-span4'>7</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>12</span>
+                    <span class='ranking-list-span2'><img src='img/RW.png'> RW</span>
+                    <span class='ranking-list-span3'>7/9</span>
+                    <span class='ranking-list-span4'>7</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>13</span>
+                    <span class='ranking-list-span2'><img src='img/OMG.png'> OMG</span>
+                    <span class='ranking-list-span3'>7/9</span>
+                    <span class='ranking-list-span4'>7</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>14</span>
+                    <span class='ranking-list-span2'><img src='img/DMO.png'> DMO</span>
+                    <span class='ranking-list-span3'>6/10</span>
+                    <span class='ranking-list-span4'>6</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>15</span>
+                    <span class='ranking-list-span2'><img src='img/LGD.png'> LGD</span>
+                    <span class='ranking-list-span3'>5/11</span>
+                    <span class='ranking-list-span4'>5</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>16</span>
+                    <span class='ranking-list-span2'><img src='img/LNG.png'> LNG</span>
+                    <span class='ranking-list-span3'>5/11</span>
+                    <span class='ranking-list-span4'>5</span>
+                </div>
+                <div>
+                    <span class='ranking-list-span1'>17</span>
+                    <span class='ranking-list-span2'><img src='img/V5.png'> V5</span>
+                    <span class='ranking-list-span3'>0/16</span>
+                    <span class='ranking-list-span4'>0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 春季赛后季赛 -->
+    <div id='match-center-div-2' class="show2" style="display: none;">
+        <div class='round-1'><span>第一轮</span>
+            <div class="round-1-body">
+                <span>已结束</span>4月22日 17:00
+                <a href="https://lpl.qq.com/es/stats.shtml?bmid=6124" class='sju' style="margin-left: 20px;margin-right: 5px;">数据</a>
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36298" class='sping' style="margin-right: 0px;">视频</a>
+                <div class="team-div"><img src="img/ES.png"><span>ES</span></div><div class='team-sore'>1</div>
+                <div class="team-div"><img src="img/WE.png"><span>WE</span></div><div class='team-sore' style="background: #86a2ad;">3</div>
+            </div>
+            <div class="round-1-body">
+                <span>已结束</span>4月23日 17:00
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36298" class='sju' style="margin-left: 20px;margin-right: 5px;">数据</a>
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36317" class='sping' style="margin-right: 0px;">视频</a>
+                <div class="team-div"><img src="img/EDG.png"><span>EDG</span></div><div class='team-sore' style="background: #86a2ad;">3</div>
+                <div class="team-div"><img src="img/RNG.png"><span>RNG</span></div><div class='team-sore'>1</div>
+            </div>
+        </div>
+        <!-- 空隙 -->
+        <div id='Gap'></div>
+
+        <div class='round-1'><span>第二轮</span>
+            <div class="round-1-body">
+                <span>已结束</span>4月24日 17:00
+                <a href="https://lpl.qq.com/es/stats.shtml?bmid=6126" class='sju' style="margin-left: 20px;margin-right: 5px;">数据</a>
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36334" class='sping' style="margin-right: 0px;">视频</a>
+                <div class="team-div"><img src="img/TES.png"><span>TES</span></div><div class='team-sore' style="background: #86a2ad;">3</div>
+                <div class="team-div"><img src="img/WE.png"><span>WE</span></div><div class='team-sore'>1</div>
+            </div>
+            <div class="round-1-body">
+                <span>已结束</span>4月25日 17:00
+                <a href="https://lpl.qq.com/es/stats.shtml?bmid=6127" class='sju' style="margin-left: 20px;margin-right: 5px;">数据</a>
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36358" class='sping' style="margin-right: 0px;">视频</a>
+                <div class="team-div"><img src="img/FPX.png"><span>FPX</span></div><div class='team-sore' style="background: #86a2ad;">3</div>
+                <div class="team-div"><img src="img/EDG.png"><span>EDG</span></div><div class='team-sore'>1</div>
+            </div>
+        </div>
+        <!-- 空隙 -->
+        <div id='Gap'></div>
+
+        <div class='round-1'><span>第三轮</span>
+            <div class="round-1-body">
+                <span>已结束</span>4月26日 17:00
+                <a href="https://lpl.qq.com/es/stats.shtml?bmid=6128" class='sju' style="margin-left: 20px;margin-right: 5px;">数据</a>
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36376" class='sping' style="margin-right: 0px;">视频</a>
+                <div class="team-div"><img src="img/IG.png"><span>IG</span></div><div class='team-sore'>1</div>
+                <div class="team-div"><img src="img/TES.png"><span>TES</span></div><div class='team-sore' style="background: #86a2ad;">3</div>
+            </div>
+            <div class="round-1-body">
+                <span>已结束</span>4月27日 17:00
+                <a href="https://lpl.qq.com/es/stats.shtml?bmid=6129" class='sju' style="margin-left: 20px;margin-right: 5px;">数据</a>
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36383" class='sping' style="margin-right: 0px;">视频</a>
+                <div class="team-div"><img src="img/JDG.png"><span>JDG</span></div><div class='team-sore' style="background: #86a2ad;">3</div>
+                <div class="team-div"><img src="img/FPX.png"><span>FPX</span></div><div class='team-sore'>0</div>
+            </div>
+        </div>
+        <!-- 空隙 -->
+        <div id='Gap' style="width: 60px;border-right: 1px solid #c2c2c2;"></div>
+        <div id='Gap' style="width: 60px;border-top: 0px;margin-top: 25px;"></div>
+
+        <div class='round-1' style="margin-top: 106px;"><span>总决赛</span>
+            <div class="round-1-body" style="height: 150px;">
+                <span>已结束</span>5月02日 17:00
+                <a href="https://lpl.qq.com/es/stats.shtml?bmid=6131" class='sju' style="margin-left: 20px;margin-right: 5px;">数据</a>
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36441" class='sping' style="margin-right: 0px;">视频</a>
+                <div class="team-div"><img src="img/TES.png"><span>TES</span></div><div class='team-sore'>2</div>
+                <div class="team-div"><img src="img/JDG.png"><span>JDG</span></div><div class='team-sore' style="background: #86a2ad;">3</div>
+            </div>
+            <span>季军赛</span>
+            <div class="round-1-body" style="height: 120px;">
+                <span>已结束</span>4月29日 17:00
+                <a href="https://lpl.qq.com/es/stats.shtml?bmid=6130" class='sju' style="margin-left: 20px;margin-right: 5px;">数据</a>
+                <a href="https://lpl.qq.com/es/video_detail.shtml?nid=36411" class='sping' style="margin-right: 0px;">视频</a>
+                <div class="team-div"><img src="img/IG.png"><span>IG</span></div><div class='team-sore'>0</div>
+                <div class="team-div"><img src="img/FPX.png"><span>FPX</span></div><div class='team-sore' style="background: #86a2ad;">3</div>
+            </div>
+        </div>
+    </div>
+<!-- 夏季赛常规赛 -->
+    <div id='match-center-div-1' class="show3" style="display: none;">
+    <li style="margin-right: 10px;">
+        <div class='match-center-li' style="background-color: rgb(196, 169, 112);">未开始 <span>7-03 &nbsp;&nbsp;19:00</span></div>
+
+        <div class='match-center-left-img'><img src='img/VG.png'>VG</div>
+        <div class='match-center-score'>0：0<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36240" class='video-review'>敬请期待</a></div>
+        <div class='match-center-right-img'><img src='img/ES.png'>ES</div>
+        <div class='match-center-foot'>2020职业联赛<br>夏季赛常规赛 第五周 BO3</div>
+    </li>
+
+    <li style="margin-right: 10px;">
+        <div class='match-center-li' style="background-color: rgb(196, 169, 112);">未开始 <span>7-04 &nbsp;&nbsp;17:00</span></div>
+
+        <div class='match-center-left-img'><img src='img/RW.png'>RW</div>
+        <div class='match-center-score'>0：0<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36247" class='video-review'>敬请期待</a></div>
+        <div class='match-center-right-img'><img src='img/EDG.png'>EDG</div>
+        <div class='match-center-foot'>2020职业联赛<br>夏季赛常规赛 第五周 BO3</div>
+    </li>
+
+    <li style="margin-right: 10px;">
+        <div class='match-center-li' style="background-color: rgb(196, 169, 112);">未开始 <span>7-04 &nbsp;&nbsp;19:00</span></div>
+
+        <div class='match-center-left-img'><img src='img/IG.png'>IG</div>
+        <div class='match-center-score'>0：0<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36255" class='video-review'>敬请期待</a></div>
+        <div class='match-center-right-img'><img src='img/JDG.png'>JDG</div>
+        <div class='match-center-foot'>2020职业联赛<br>夏季赛常规赛 第五周 BO3</div>
+    </li>
+
+    <li style="margin-right: 10px;">
+        <div class='match-center-li' style="background-color: rgb(196, 169, 112);">未开始 <span>7-5 &nbsp;&nbsp;17:00</span></div>
+
+        <div class='match-center-left-img'><img src='img/ES.png'>ES</div>
+        <div class='match-center-score'>0：0<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36263" class='video-review'>敬请期待</a></div>
+        <div class='match-center-right-img'><img src='img/V5.png'>V5</div>
+        <div class='match-center-foot'>2020职业联赛<br>夏季赛常规赛 第五周 BO3</div>
+    </li>
+
+    <li style="margin-right: 0px;">
+        <div class='match-center-li' style="background-color: rgb(196, 169, 112);">未开始 <span>7-05 &nbsp;&nbsp;17:00</span></div>
+
+        <div class='match-center-left-img'><img src='img/RNG.png'>RNG</div>
+        <div class='match-center-score'>0：0<a href="https://lpl.qq.com/es/video_detail.shtml?nid=36266" class='video-review'>敬请期待</a></div>
+        <div class='match-center-right-img'><img src='img/FPX.png'>FPX</div>
+        <div class='match-center-foot'>2020职业联赛<br>夏季赛常规赛 第五周 BO3</div>
+    </li>
+<!-- 每周最佳阵容 -->
+    <div id='people'><span>每周最佳阵容</span>
+        <div style="margin-right: 18px;">
+            <img src="img/top.png" class='people-img-1'>
+            <img src='img/TES.png' class='people-img-2'>
+            <img src='img/369.png' class='people-img-3'>
+            369
+        </div>
+        <div style="margin-right: 17px;">
+            <img src="img/wild.png" class='people-img-1'>
+            <img src='img/IG.png' class='people-img-2'>
+            <img src='img/Ning.png' class='people-img-3'>
+            Ning
+        </div>
+        <div style="margin-right: 17px;">
+            <img src="img/mid.png" class='people-img-1'>
+            <img src='img/IG.png' class='people-img-2'>
+            <img src='img/Rookie.png' class='people-img-3'>
+            Rookie
+        </div>
+        <div style="margin-right: 17px;">
+            <img src="img/lower.png" class='people-img-1'>
+            <img src='img/TES.png' class='people-img-2'>
+            <img src='img/JackeyLove.png' class='people-img-3'>
+            JackeyLove
+        </div>
+        <div>
+            <img src="img/auxiliary.png" class='people-img-1'>
+            <img src='img/RNG.png' class="people-img-2">
+            <img src='img/Ming.png' class='people-img-3'>
+            Ming
+        </div>
+    </div>
+<!--积分表 -->
+    <div id='ranking-list-title'><span>积分表</span>
+        <div class='ranking-list'>
+            <div>
+                <span style="color:#151517;margin-left: 15px;display: inline-block;width: 100px;">排名</span>
+                <span style="display: inline-block;width: 120px;">俱乐部</span>
+                <span style="margin-left: 45px;display: inline-block;width: 50px;">胜负</span>
+                <span style="margin-left: 29px;display: inline-block;">积分</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>1</span>
+                <span class='ranking-list-span2'><img src='img/TES.png'> TES</span>
+                <span class='ranking-list-span3'>4/0</span>
+                <span class='ranking-list-span4'>4</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>2</span>
+                <span class='ranking-list-span2'><img src='img/V5.png'> V5</span>
+                <span class='ranking-list-span3'>4/1</span>
+                <span class='ranking-list-span4'>4</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>3</span>
+                <span class='ranking-list-span2'><img src='img/RNG.png'> RNG</span>
+                <span class='ranking-list-span3'>4/1</span>
+                <span class='ranking-list-span4'>4</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>4</span>
+                <span class='ranking-list-span2'><img src='img/IG.png'> IG</span>
+                <span class='ranking-list-span3'>3/1</span>
+                <span class='ranking-list-span4'>3</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>5</span>
+                <span class='ranking-list-span2'><img src='img/LGD.png'> LGD</span>
+                <span class='ranking-list-span3'>3/1</span>
+                <span class='ranking-list-span4'>3</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>6</span>
+                <span class='ranking-list-span2'><img src='img/WE.png'> WE</span>
+                <span class='ranking-list-span3'>3/2</span>
+                <span class='ranking-list-span4'>3</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>7</span>
+                <span class='ranking-list-span2'><img src='img/SN.png'> SN</span>
+                <span class='ranking-list-span3'>3/3</span>
+                <span class='ranking-list-span4'>3</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>8</span>
+                <span class='ranking-list-span2'><img src='img/FPX.png'> FPX</span>
+                <span class='ranking-list-span3'>2/1</span>
+                <span class='ranking-list-span4'>2</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>9</span>
+                <span class='ranking-list-span2'><img src='img/EDG.png'> EDG</span>
+                <span class='ranking-list-span3'>2/2</span>
+                <span class='ranking-list-span4'>2</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>10</span>
+                <span class='ranking-list-span2'><img src='img/LNG.png'> LNG</span>
+                <span class='ranking-list-span3'>2/2</span>
+                <span class='ranking-list-span4'>2</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>11</span>
+                <span class='ranking-list-span2'><img src='img/ES.png'> ES</span>
+                <span class='ranking-list-span3'>2/3</span>
+                <span class='ranking-list-span4'>2</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>12</span>
+                <span class='ranking-list-span2'><img src='img/JDG.png'> JDG</span>
+                <span class='ranking-list-span3'>1/2</span>
+                <span class='ranking-list-span4'>1</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>13</span>
+                <span class='ranking-list-span2'><img src='img/VG.png'> VG</span>
+                <span class='ranking-list-span3'>1/3</span>
+                <span class='ranking-list-span4'>1</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>14</span>
+                <span class='ranking-list-span2'><img src='img/BLG.png'> BLG</span>
+                <span class='ranking-list-span3'>1/3</span>
+                <span class='ranking-list-span4'>1</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>15</span>
+                <span class='ranking-list-span2'><img src='img/OMG.png'> OMG</span>
+                <span class='ranking-list-span3'>1/4</span>
+                <span class='ranking-list-span4'>1</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>16</span>
+                <span class='ranking-list-span2'><img src='img/RW.png'> RW</span>
+                <span class='ranking-list-span3'>0/3</span>
+                <span class='ranking-list-span4'>0</span>
+            </div>
+            <div>
+                <span class='ranking-list-span1'>17</span>
+                <span class='ranking-list-span2'><img src='img/DMO.png'> DMO</span>
+                <span class='ranking-list-span3'>0/4</span>
+                <span class='ranking-list-span4'>0</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</ul>
+</div>
+
+<!-- 英雄资料 -->
+<div id='hero-information' name='hero-information'>
+<!-- 英雄资料标题 -->
+    <div id='hero-information-title'>
+        <div class='title'>&nbsp;英雄资料</div>
+        <ul class='hero-information-title-ul'>
+            <li style="width:100px;margin-left: 10px;font-weight:700;color:#1da6ba" class='hero-all'><span>◆</span>所有英雄<span>◆</span></li>
+            <li class='hero-warrior'><span>◇</span>战士<span>◇</span></li>
+            <li class='hero-master'><span>◇</span>法师<span>◇</span></li>
+            <li class='hero-assassin'><span>◇</span>刺客<span>◇</span></li>
+            <li class='hero-tank'><span>◇</span>坦克<span>◇</span></li>
+            <li class='hero-shooter'><span>◇</span>射手<span>◇</span></li>
+            <li class='hero-auxiliary'><span>◇</span>辅助<span>◇</span></li>
+        </ul>
+        <div><a href="https://lol.qq.com/data/info-heros.shtml">资料库 →</a></div>
+    </div>
+<!-- 英雄资料内容 -->
+    <div id='hero-information-detailed'>
+        <ul class='hero-information-detailed-ul'>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=1"><img src="img/hero/anni.png"></a><br>黑暗之女</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=2"><img src="img/hero/aolafu.png"></a><br>狂战士</li>
+            <li class='master tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=3"><img src="img/hero/jialiao.png"></a><br>正义巨像</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=4"><img src="img/hero/kapai.png"></a><br>卡牌大师</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=5"><img src="img/hero/debang.png"></a><br>德邦总管</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=6"><img src="img/hero/ejiate.png"></a><br>无畏战车</li>
+            <li class='master assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=7"><img src="img/hero/yaoji.png"></a><br>诡术妖姬</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=8"><img src="img/hero/xixuegui.png"></a><br>猩红收割者</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=9"><img src="img/hero/daocaoren.png"></a><br>远古恐惧</li>
+            <li class='warrior auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=10"><img src="img/hero/tianshi.png"></a><br>正义天使</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=11"><img src="img/hero/jiansheng.png"></a><br>无极剑圣</li>
+            <li class='tank auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=12"><img src="img/hero/niutou.png"></a><br>牛头酋长</li>
+            <li class='warrior master'><a href="https://lol.qq.com/data/info-defail.shtml?id=13"><img src="img/hero/liulang.png"></a><br>符文法师</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=14"><img src="img/hero/saien.png"></a><br>亡灵战神</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=15"><img src="img/hero/lunzima.png"></a><br>战争女神</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=16"><img src="img/hero/naima.png"></a><br>众星之子</li>
+            <li class='assassin shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=17"><img src="img/hero/timo.png"></a><br>迅捷斥候</li>
+            <li class='assassin shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=18"><img src="img/hero/xiaopao.png"></a><br>麦林炮手</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=19"><img src="img/hero/langren.png"></a><br>祖安怒兽</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=20"><img src="img/hero/xuerenlulu.png"></a><br>雪原双子</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=21"><img src="img/hero/nvqiang.png"></a><br>赏金猎人</li>
+            <li class='shooter auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=22"><img src="img/hero/hanbing.png"></a><br>寒冰射手</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=23"><img src="img/hero/manwang.png"></a><br>蛮族之王</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=24"><img src="img/hero/wuqi.png"></a><br>武器大师</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=25"><img src="img/hero/moganna.png"></a><br>堕落天使</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=26"><img src="img/hero/shiguanglaotou.png"></a><br>时光守护</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=27"><img src="img/hero/lianjin.png"></a><br>炼金术士</li>
+            <li class='master assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=28"><img src="img/hero/guafu.png"></a><br>痛苦之拥</li>
+            <li class='assassin shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=29"><img src="img/hero/laoshu.png"></a><br>瘟疫之源</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=30"><img src="img/hero/sige.png"></a><br>死亡颂唱者</li>
+            <li class='master tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=31"><img src="img/hero/dachongzi.png"></a><br>虚空恐惧</li>
+            <li class='master tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=32"><img src="img/hero/amumu.png"></a><br>殇之木乃伊</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=33"><img src="img/hero/longgui.png"></a><br>披甲龙龟</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=34"><img src="img/hero/fenghuang.png"></a><br>冰晶凤凰</li>
+            <li class='assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=35"><img src="img/hero/xiaochou.png"></a><br>恶魔小丑</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=36"><img src="img/hero/mengduo.png"></a><br>祖安狂人</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=37"><img src="img/hero/qinnv.png"></a><br>琴瑟仙女</li>
+            <li class='master assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=38"><img src="img/hero/kasading.png"></a><br>虚空行者</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=39"><img src="img/hero/daomei.png"></a><br>刀锋舞者</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=40"><img src="img/hero/fengnv.png"></a><br>风暴之怒</li>
+            <li class='warrior'><a href="https://lol.qq.com/data/info-defail.shtml?id=41"><img src="img/hero/chuanzhang.png"></a><br>海洋之灾</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=42"><img src="img/hero/feiji.png"></a><br>英勇投弹手</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=43"><img src="img/hero/kaerma.png"></a><br>天启者</li>
+            <li class='warrior auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=44"><img src="img/hero/baoshi.png"></a><br>瓦罗兰之盾</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=45"><img src="img/hero/xiaofa.png"></a><br>邪恶小法师</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=48"><img src="img/hero/jumo.png"></a><br>巨魔之王</li>
+            <li class='warrior master'><a href="https://lol.qq.com/data/info-defail.shtml?id=50"><img src="img/hero/wuya.png"></a><br>洛克萨斯统领</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=51"><img src="img/hero/nvjing.png"></a><br>皮城女警</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=53"><img src="img/hero/jiqiren.png"></a><br>蒸汽机器人</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=54"><img src="img/hero/shitouren.png"></a><br>熔岩巨兽</li>
+            <li class='master assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=55"><img src="img/hero/kate.png"></a><br>不详之刃</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=56"><img src="img/hero/mengyan.png"></a><br>永恒梦魇</li>
+            <li class='master tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=57"><img src="img/hero/shujing.png"></a><br>扭曲树精</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=58"><img src="img/hero/eyu.png"></a><br>荒漠屠夫</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=59"><img src="img/hero/huangzi.png"></a><br>德玛西亚皇子</li>
+            <li class='warrior master'><a href="https://lol.qq.com/data/info-defail.shtml?id=60"><img src="img/hero/zhizhu.png"></a><br>蜘蛛女皇</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=61"><img src="img/hero/fatiao.png"></a><br>发条魔灵</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=62"><img src="img/hero/houzi.png"></a><br>齐天大圣</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=63"><img src="img/hero/huonan.png"></a><br>复仇焰魂</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=64"><img src="img/hero/mangseng.png"></a><br>盲僧</li>
+            <li class='assassin shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=67"><img src="img/hero/weien.png"></a><br>暗夜猎手</li>
+            <li class='warrior master'><a href="https://lol.qq.com/data/info-defail.shtml?id=68"><img src="img/hero/lanbo.png"></a><br>机械公敌</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=69"><img src="img/hero/shenv.png"></a><br>魔蛇之拥</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=72"><img src="img/hero/xianfeng.png"></a><br>水晶先锋</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=74"><img src="img/hero/datou.png"></a><br>大发明家</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=75"><img src="img/hero/goutou.png"></a><br>沙漠死神</li>
+            <li class='master assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=76"><img src="img/hero/baonv.png"></a><br>狂野女猎手</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=77"><img src="img/hero/wudier.png"></a><br>兽灵行者</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=78"><img src="img/hero/bobi.png"></a><br>圣锤之毅</li>
+            <li class='warrior master'><a href="https://lol.qq.com/data/info-defail.shtml?id=79"><img src="img/hero/jiutong.png"></a><br>酒桶</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=80"><img src="img/hero/pansen.png"></a><br>不屈之枪</li>
+            <li class='master shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=81"><img src="img/hero/ez.png"></a><br>探险家</li>
+            <li class='warrior'><a href="https://lol.qq.com/data/info-defail.shtml?id=82"><img src="img/hero/tienan.png"></a><br>铁铠冥魂</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=83"><img src="img/hero/juemu.png"></a><br>牧魂人</li>
+            <li class='assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=84"><img src="img/hero/akali.png"></a><br>离群之刺</li>
+            <li class='master shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=85"><img src="img/hero/kainan.png"></a><br>狂暴之心</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=86"><img src="img/hero/gailun.png"></a><br>德玛西亚之力</li>
+            <li class='tank auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=89"><img src="img/hero/rinv.png"></a><br>曙光女神</li>
+            <li class='master assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=90"><img src="img/hero/maerzhaha.png"></a><br>虚空先知</li>
+            <li class='assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=91"><img src="img/hero/daofeng.png"></a><br>刀锋之影</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=92"><img src="img/hero/ruiwen.png"></a><br>放逐之刃</li>
+            <li class='master shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=96"><img src="img/hero/dazui.png"></a><br>深渊巨口</li>
+            <li class='tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=98"><img src="img/hero/shen.png"></a><br>暮光之眼</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=99"><img src="img/hero/guanghui.png"></a><br>光辉女郎</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=101"><img src="img/hero/zelasi.png"></a><br>远古巫灵</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=102"><img src="img/hero/longnv.png"></a><br>龙血武姬</li>
+            <li class='master assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=103"><img src="img/hero/huli.png"></a><br>九尾妖狐</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=104"><img src="img/hero/nanqiang.png"></a><br>法外狂徒</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=105"><img src="img/hero/xiaoyuren.png"></a><br>潮汐海灵</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=106"><img src="img/hero/gouxiong.png"></a><br>不灭狂雷</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=107"><img src="img/hero/shizigou.png"></a><br>傲之追猎者</li>
+            <li class='master shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=110"><img src="img/hero/weilus.png"></a><br>惩戒之箭</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=111"><img src="img/hero/taitan.png"></a><br>深海泰坦</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=112"><img src="img/hero/weiketuo.png"></a><br>机械先驱</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=113"><img src="img/hero/zhumei.png"></a><br>北地之怒</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=114"><img src="img/hero/jianji.png"></a><br>无双剑姬</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=115"><img src="img/hero/zhadanren.png"></a><br>爆破鬼才</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=117"><img src="img/hero/lulu.png"></a><br>仙灵女巫</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=119"><img src="img/hero/delaiwen.png"></a><br>荣耀行刑官</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=120"><img src="img/hero/renma.png"></a><br>战争之影</li>
+            <li class='assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=121"><img src="img/hero/tanglang.png"></a><br>虚空掠夺者</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=122"><img src="img/hero/luoshou.png"></a><br>洛克萨斯之手</li>
+            <li class='warrior shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=126"><img src="img/hero/jiesi.png"></a><br>未来守护者</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=127"><img src="img/hero/bingnv.png"></a><br>冰霜女巫</li>
+            <li class='warrior master'><a href="https://lol.qq.com/data/info-defail.shtml?id=131"><img src="img/hero/jiaoyue.png"></a><br>皎月女神</li>
+            <li class='assassin shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=133"><img src="img/hero/kuiyin.png"></a><br>德玛西亚之翼</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=134"><img src="img/hero/xindeila.png"></a><br>暗黑元首</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=136"><img src="img/hero/longwang.png"></a><br>铸星龙王</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=141"><img src="img/hero/kaiyin.png"></a><br>影流之镰</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=142"><img src="img/hero/zuoyi.png"></a><br>暮光星灵</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=143"><img src="img/hero/jiela.png"></a><br>荆棘之兴</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=145"><img src="img/hero/kasha.png"></a><br>虚空之女</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=150"><img src="img/hero/naer.png"></a><br>迷失之牙</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=154"><img src="img/hero/zhake.png"></a><br>生化魔人</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=157"><img src="img/hero/yasuo.png"></a><br>疾风剑豪</li>
+            <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=161"><img src="img/hero/dayan.png"></a><br>虚空之眼</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=163"><img src="img/hero/yanque.png"></a><br>岩雀</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=164"><img src="img/hero/qinggangying.png"></a><br>青钢影</li>
+            <li class='tank auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=201"><img src="img/hero/bulong.png"></a><br>布隆</li>
+            <li class='master shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=202"><img src="img/hero/jin.png"></a><br>戏命师</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=203"><img src="img/hero/qianjue.png"></a><br>永猎双子</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=222"><img src="img/hero/jinkes.png"></a><br>暴走萝莉</li>
+            <li class='tank auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=223"><img src="img/hero/tamu.png"></a><br>河流之王</li>
+            <li class='shooter auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=235"><img src="img/hero/saina.png"></a><br>涤魂圣枪</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=236"><img src="img/hero/luxian.png"></a><br>圣枪游侠</li>
+            <li class='assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=238"><img src="img/hero/jie.png"></a><br>影流之主</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=240"><img src="img/hero/kelie.png"></a><br>暴怒骑士</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=245"><img src="img/hero/aike.png"></a><br>时间刺客</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=246"><img src="img/hero/qiyana.png"></a><br>元素女皇</li>
+            <li class='warrior assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=254"><img src="img/hero/wei.png"></a><br>皮城执法官</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=266"><img src="img/hero/jianmo.png"></a><br>暗觞剑魔</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=267"><img src="img/hero/namei.png"></a><br>唤潮妖姬</li>
+            <li class='master shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=268"><img src="img/hero/shahuang.png"></a><br>沙漠皇帝</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=350"><img src="img/hero/maomi.png"></a><br>魔法猫咪</li>
+            <li class='warrior auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=412"><img src="img/hero/chuishi.png"></a><br>魂锁典狱长</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=420"><img src="img/hero/haishoujisi.png"></a><br>海兽祭司</li>
+            <li class='warrior'><a href="https://lol.qq.com/data/info-defail.shtml?id=451"><img src="img/hero/leikesai.png"></a><br>虚空遁地兽</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=427"><img src="img/hero/cuishen.png"></a><br>翠神</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=429"><img src="img/hero/fuchouzmao.png"></a><br>复仇之矛</li>
+            <li class='auxiliary master'><a href="https://lol.qq.com/data/info-defail.shtml?id=432"><img src="img/hero/bade.png"></a><br>星际游神</li>
+            <li class='auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=497"><img src="img/hero/luo.png"></a><br>幻翎</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=498"><img src="img/hero/xia.png"></a><br>逆羽</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=516"><img src="img/hero/aoen.png"></a><br>山影之焰</li>
+            <li class='master assassin'><a href="https://lol.qq.com/data/info-defail.shtml?id=517"><img src="img/hero/sailasi.png"></a><br>解脱者</li>
+            <li class='master auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=518"><img src="img/hero/nikou.png"></a><br>万花通灵</li>
+            <li class='shooter'><a href="https://lol.qq.com/data/info-defail.shtml?id=523"><img src="img/hero/efeiliusi.png"></a><br>残月之肃</li>
+            <li class='assassin auxiliary'><a href="https://lol.qq.com/data/info-defail.shtml?id=555"><img src="img/hero/paike.png"></a><br>血港鬼影</li>
+            <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=875"><img src="img/hero/wanhao.png"></a><br>腕豪</li>
+        </ul>
+    </div>
+</div>
+
+<!-- FANART创作馆 -->
+<div id='creative' name='creative'>
+    <span class='creative-title'>&nbsp;FANART创作馆</span>
+    <a href="https://lol.qq.com/activity/index.shtml" class='creative-more'>更多.-></a><br><br>
+
+    <a href="https://tr.lol.qq.com/fanart/detail.html?contentId=67649">
+        <div style="margin-right: 20px;background: url(img/creative-1.jpg);background-size:192px;">
+            <div>永恩vs压缩<span>那是我的劫难</span></div>
+        </div>
+    </a>
+
+    <a href="https://tr.lol.qq.com/fanart/detail.html?contentId=67648">
+        <div style="margin-right: 20px;background: url(img/creative-2.jpg);background-size:192px;">
+            <div>真实伤害<span>鱼岁</span></div>
+        </div>
+    </a>
+
+    <a href="https://tr.lol.qq.com/fanart/detail.html?contentId=67647">
+        <div style="background: url(img/creative-3.jpg);background-size:192px;">
+            <div>暗星乐芙兰<span>鱼岁</span></div>
+        </div>
+    </a>
+
+    <a href="https://tr.lol.qq.com/fanart/detail.html?contentId=67633">
+        <div style="margin-right: 0px;float: right;background: url(img/creative-4.jpg);background-size:192px;">
+            <div>星之守护者索拉卡<span>残月荧光</span></div>
+        </div>
+    </a>
+
+    <a href="https://tr.lol.qq.com/fanart/detail.html?contentId=67626">
+        <div style="margin-right: 20px;background: url(img/creative-5.jpg);background-size:192px;">
+            <div>团战<span>嵘</span></div>
+        </div>
+    </a>
+
+    <a href="https://tr.lol.qq.com/fanart/detail.html?contentId=67625">
+        <div style="margin-right: 20px;background: url(img/creative-6.jpg);background-size:192px;">
+            <div>离群之刺——阿卡丽<span>嵘</span></div>
+        </div>
+    </a>
+
+    <a href="https://tr.lol.qq.com/fanart/detail.html?contentId=67619">
+        <div style="background: url(img/creative-7.jpg);background-size:192px;">
+            <div>奥术大师佐伊<span>柯子</span></div>
+        </div>
+    </a>
+
+    <a href="https://tr.lol.qq.com/fanart/detail.html?contentId=67617">
+        <div style="margin-right: 0px;float: right;background: url(img/creative-8.jpg);background-size:192px;">
+            <div>冠军之心——薇恩<span>敷衍</span></div>
+        </div>
+    </a>
+
+</div>
+
+<!-- 用户调查/合作媒体 -->
+<div id='user-survey'>
+    <a href="https://lol.qq.com/v/v2/detail.shtml?docid=13949353036874900892&tdsourcetag=s_pctim_aiomsg"><img src="img/user-survey-1.jpg"></a>
+    <ul>
+        <li style="margin-top: 61px;"><a href="https://lol.qq.com/act/a20160407ymy/index.htm?iSurveyId=1"><img src="img/user-survey-2.png"></a></li>
+        <li><a href="https://lol.qq.com/gicp/news/423/2/1334/1.html"><img src="img/user-survey-3.png"></a></li>
+        <li class='user-survey-year'><a><img src="img/user-survey-4.png"></a></li>
+        <li class='media'>◇ 合作媒体→ ◇
+            <div class='media-div'>
+                <ul class='media-ul'>
+                    <li  style="height: 8px;"></li>
+                    <a href="http://lol.tuwan.com/"><li>兔玩</li></a>
+                    <a href="http://lol.te5.com/"><li>特玩</li></a>
+                    <a href="http://www.lolfun.cn/"><li>T-rex</li></a>
+                    <a href="http://www.dadianjing.cn/"><li>大电竞</li></a>
+                    <a href="https://gg.hupu.com/"><li>虎扑电竞</li></a>
+                    <a href="https://www.loldk.com/"><li>大咖</li></a>
+                    <a href="https://lol.duowan.com/"><li>多玩</li></a>
+                    <a href="https://www.wanplus.com/lol/"><li>玩加电竞</li></a>
+                    <a href="https://www.scoregg.com/"><li>伐木累</li></a>
+                    <a href="https://imgx.lygou.cc/cherry/lol/list"><li>捞月狗</li></a>
+                    <a href="http://51lol.feixiong.tv/"><li>飞熊TV</li></a>
+                    <a href="http://www.gamemei.com/yxlm/"><li>游戏魅</li></a>
+                    <a href="http://www.dianjinghu.com/"><li>电竞虎</li></a>
+                    <a href="http://l.zhangyoubao.com/"><li>掌游宝</li></a>
+                    <a href="http://lol.uuu9.com/"><li>U9</li></a>
+                    <a href="http://www.aipai.com/"><li>爱拍</li></a>
+                    <a href="http://www.lolshipin.com/"><li>木木不哭</li></a>
+                    <a href="http://bbs.nga.cn/lol?rand=566"><li>NGA</li></a>
+                    <a href="http://lol.178.com/"><li>178</li></a>
+                    <a href="http://lol.replays.net/"><li>锐派</li></a>
+                    <a href="http://lol.17173.com/"><li>17173</li></a>
+                    <a href="https://lol.qq.com/lpl.15w.com"><li>15W</li></a>
+                    <a href="http://www.pentaq.com/"><li>PentaQ</li></a>
+                    <a href="https://www.douyu.com/g_LOL"><li>斗鱼</li></a>
+                    <a href="https://www.huya.com/g/lol"><li>虎牙</li></a>
+                    <a href="http://www.titanar.com/index.action"><li>神之梯</li></a>
+                    <a href="http://lol.dj.sina.com.cn/"><li>新浪游戏</li></a>
+                    <a href="https://lol.chaofan.com/"><li>超凡电竞</li></a>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- 底部 -->
+<div id='foot' name='foot'>
+    <div id='foot-left'></div>
+    <div id='foot-middle'>
+        <img src='img/foot-1.jpg' style="margin-left: 80px;margin-top: 8px;">
+        <img src='img/foot-2.jpg'>
+    </div>
+    <div id='foot-right'>
+        <a href="https://ieg.tencent.com/">腾讯互动娱乐</a> | <a href="https://game.qq.com/contract.shtml">服务条款</a> | 
+        <a href="https://game.qq.com/privacy_guide.shtml?ADTAG=gamepcbottom">隐私保护指引</a> | 
+        <a href="https://game.qq.com/privacy_guide_children.shtml?ADTAG=gamepcbottom">儿童隐私保护指引</a> | 
+        <a href="https://careers.tencent.com/">腾讯游戏招聘</a> | 
+        <a href="https://kf.qq.com/">腾讯游戏客服</a> | 
+        <a href="https://game.qq.com/web201910/introduce.html?ADTAG=gamepcbottom">游戏列表</a> | 
+        <a href="https://www.tencent.com/zh-cn/partnership.html">广告服务及商务合作</a><br>
+        <a href="https://www.tencent.com/zh-CN/statement.html?/law/copyright.htm">腾讯公司版权所有</a><br>
+        COPYRIGHT © 1998 - 2020 TENCENT. ALL RIGHTS RESERVED.<br>
+        COPYRIGHT © 2012 Riot Games,Inc. ALL RIGHTS RESERVED.<br>
+        本网络游戏适合18+岁的用户使用；为了您的健康，请合理控制游戏时间。<br>
+        <a href="https://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"><img src="img/foot-3.jpg">工商网监电子标识</a> | 
+        <a href="https://www.qq.com/culture.shtml">粤网文[2017]6138-1456号</a> | 
+        <a href="https://game.qq.com/culture2.htm">（总）网出证（粤）字第057号</a><br>
+        批准文号：新出审字[2011]310号 |文网进字[2011] 004号 | 出版物号：ISBN 978-7-89989-145-2|全国文化市场统一举报电话：12318<br>
+    </div>
+</div>
+
+<!-- 侧边栏 -->
+<ul id='sidebar'>
+    <li><a href="#activity" target="_self"><img src='img/sidebar-1.jpg' style="margin-top: 15px;margin-left: 24px;"/>热门活动</a></li>
+    <li><a href="#match-center" target="_self"><img src='img/sidebar-5.jpg' style="margin-left: 23px;"/>赛事中心</a></li>
+    <li><a href="#hero-information" target="_self"><img src='img/sidebar-2.jpg' />英雄资料</a></li>
+    <li><a href="#creative" target="_self"><img src='img/sidebar-3.jpg' style="margin-left: 22px;"/>FANART</a></li>
+    <li><a href="#comm-topact" target="_self"><img src='img/sidebar-4.gif' style="margin-left: 19px;width: 33px;">顶部</a></li>
+</ul>
+</body>
+</html>
+
+<script src="jquery-3.5.0.js"></script>
+<script>
+    $(function()
+    {
+//------------------------头部内容-------------------------------------------
+        //head div显示/隐藏
+        //移入
+        $('.head-ul').on('mouseenter',function()
+        {
+            $('.head-nav-sub-inner').stop(false,true).slideDown(400);
+        });
+        //移出
+        $('.head-nav-sub-inner').on('mouseleave',function()
+        {
+            $(this).stop(false,true).hide(300);
+        });
+        
+//----------------------------二维码-------------------------------------------
+        $('#head-userinfo-normal > a > #img2').mouseenter(function()
+        {
+            $('#head-userinfo-normal > #img2-1').stop(false,true).fadeIn(450);
+        }).mouseleave(function()
+        {
+            $('#head-userinfo-normal > #img2-1').stop(false,true).fadeOut(450);
+        });
+//----------------------------个人中心-------------------------------------------
+        $('#head-userinfo-normal > a > #img3, #head-userinfo-normal > #welcome, #head-userinfo-normal > #sign').on('mouseenter',function()
+        {
+            $('#head-userinfo-normal > #head-login-hover').stop(true,true).fadeIn(500);
+        });
+        $('#head-userinfo-normal > #head-login-hover').on('mouseleave',function()
+        {
+            $(this).stop(false,true).fadeOut(300);
+        })
+//----------------------------轮播图-------------------------------------------
+        //鼠标移入
+        $('.promo-2 > input').on('mouseenter',function()
+        {
+            $(this).css(
+            {
+                'color':'#ab8e66',
+                'background-color':' #f7f6f6',
+                'border-bottom': '2px #cea861 solid',
+            });
+            $(this).siblings('input').css(
+                {
+                    'color':'black',
+                    'background': 'rgb(227, 226, 226)',
+                    'border-bottom': '1px',
+                }
+            );
+        //图片轮播
+            let idximg = $(this).index();
+            $('.promo-1 > a').eq(idximg).stop(true,true).show(300).siblings('a').stop(true,true).hide(300);
+        });
+//----------------------------综合/公告/赛事/攻略/社区--------------------------------
+        $('.r-promo > .part-ul-title > li').on('mouseenter',function()
+        {
+            $(this).css(
+                {
+                    'color':'#1da6ba',
+                    'font-weight':'bold',
+                }
+            ).siblings('li').css(
+                {
+                    'color':'',
+                    'font-weight':'',
+                }
+            )
+            var idxb = $(this).index();
+            
+            $('.r-promo > a').eq(idxb).show().siblings('a').hide();
+            $('.r-promo > .part-ul-content > ul').eq(idxb).show().siblings('ul').hide();
+        });
+//----------------------------热门活动>正在进行/商城特惠/长期活动------------------
+        $('#activity > #underway > span').mouseenter(function()
+        {
+            $(this).css
+            ({
+                'color':'#1da6ba',
+                'border-bottom':'2px solid #1da6ba',
+                'font-weight':'bold',
+
+            }).siblings('span').css
+            ({
+                'color':'#676767',
+                'border-bottom':'0px',
+                'font-weight':'',
+            });
+
+            var idxa = $(this).index();
+            $('#activity > ul').eq(idxa).stop(true,false).show().siblings('ul').stop(true,false).hide();
+        });
+//-----------------------------图片上抬------------------------------------------------
+        $('#activity > ul > a > #content').mouseenter(function()
+        {
+            $(this).stop(true,false).animate({'margin-top':'8px'},200,'linear');
+            $(this).children('#content-inner').stop(true,false).fadeIn(200);
+        }).mouseleave(function()
+        {
+            $(this).stop(true,false).animate({'margin-top':'20px'},200,'linear');
+            $(this).children('#content-inner').stop(true,false).fadeOut(200);
+        });
+//--------------------------周免/西部天使/开发者日志--------------------------------------
+        $('#new-hero-and-skin > .new-hero').mouseenter(function()
+        {
+            $('#new-hero-and-skin > .new-hero > .new-hero-inner').stop(false,true).fadeIn(300);
+        }).mouseleave(function()
+        {
+            $('#new-hero-and-skin > .new-hero > .new-hero-inner').stop(false,true).fadeOut(300);
+        });
+        $('#new-hero-and-skin > .new-skin').mouseenter(function()
+        {
+            $('#new-hero-and-skin > .new-skin > .new-skin-inner').stop(false,true).fadeIn(300);
+        }).mouseleave(function()
+        {
+            $('#new-hero-and-skin > .new-skin > .new-skin-inner').stop(false,true).fadeOut(300);
+        });
+        $('#week-free > .week-free-first').mouseenter(function()
+        {
+            $('#week-free > .week-free-first > .first-inner').stop(false,true).fadeIn(300);
+        }).mouseleave(function()
+        {
+            $('#week-free > .week-free-first > .first-inner').stop(false,true).fadeOut(300);
+        })
+        $('#week-free > .week-free-second').mouseenter(function()
+        {
+            $(this).children('.second-inner').stop(false,true).fadeIn(300);
+        }).mouseleave(function()
+        {
+            $(this).children('.second-inner').stop(false,true).fadeOut(300);
+        });
+        //周免
+        $('#week-free > .week-free-fourth').mouseenter(function()
+        {
+            $('.free-hero').stop(false,false).slideDown();
+        }).mouseleave(function()
+        {
+            $('.free-hero').stop(false,false).slideUp();
+        });
+        $('.free-hero').on('mouseenter',function()
+        {
+            $(this).stop(false,false).show();
+        });
+        $('body').on('mouseleave',function()
+        {
+            $('.free-hero').stop(false,false).slideUp();
+        });
+//--------------------------皮肤介绍隐藏div--------------------------------------
+        $('.new-skin').on('mouseenter',function()
+        {
+            $('#new-skin-container').stop(false,true).slideDown(300);
+        });
+        $('#new-skin-container').on('mouseenter',function()
+        {
+            $(this).stop(false,false).show();
+        });
+        $('body').on('mouseleave',function()
+        {
+            $('#new-skin-container').stop(false,true).slideUp(300);
+        });
+//--------------------------赛事中心--------------------------------------
+        $('#match-center > #match-center-subtitle > span').mouseenter(function()
+        {
+            $(this).css
+            ({
+                'color':'#1da6ba',
+                'border-bottom':'2px solid #1da6ba',
+                'font-weight':'bold',
+
+            }).siblings('span').css
+            ({
+                'color':'#676767',
+                'border-bottom':'0px',
+                'font-weight':'',
+            });
+
+            var idxf = $(this).index();
+            $('#match-center >  ul > div').eq(idxf).stop(true,false).slideDown(350).siblings('div').stop(true,false).slideUp(350);
+        });
+//--------------------------英雄资料--------------------------------------
+        $('#hero-information > #hero-information-title > .hero-information-title-ul > li').click(function()
+        {
+            $(this).children('span').text('◆').parent('li').siblings('li').children('span').text('◇');
+            $(this).css({'font-weight': '700','color': '#1da6ba'}).siblings('li').css({'font-weight': '500','color': '#676767'});
+        });
+        $('#hero-information > #hero-information-title > div > a').mouseenter(function()
+        {
+            $(this).css({'text-decoration':'underline','font-weight':'700','color':'#1da6ba'});
+        }).mouseleave(function()
+        {
+            $(this).css({'text-decoration':'none','font-weight':'500','color':'#7ea1a6'})
+        });
+        // 所有英雄
+        $('#hero-information > #hero-information-title > .hero-information-title-ul > .hero-all').click(function()
+        {
+               $('#hero-information-detailed > .hero-information-detailed-ul > li').show();
+        });
+        // 战士
+        $('#hero-information > #hero-information-title > .hero-information-title-ul > .hero-warrior').click(function()
+        {
+               $('#hero-information-detailed > .hero-information-detailed-ul > li').hide();
+               $('li.warrior').show();
+        });
+        //法师
+        $('#hero-information > #hero-information-title > .hero-information-title-ul > .hero-master').click(function()
+        {
+               $('#hero-information-detailed > .hero-information-detailed-ul > li').hide();
+               $('li.master').show();
+        });
+        //刺客
+        $('#hero-information > #hero-information-title > .hero-information-title-ul > .hero-assassin').click(function()
+        {
+               $('#hero-information-detailed > .hero-information-detailed-ul > li').hide();
+               $('li.assassin').show();
+        });
+        //坦克
+        $('#hero-information > #hero-information-title > .hero-information-title-ul > .hero-tank').click(function()
+        {
+               $('#hero-information-detailed > .hero-information-detailed-ul > li').hide();
+               $('li.tank').show();
+        });
+        //射手
+        $('#hero-information > #hero-information-title > .hero-information-title-ul > .hero-shooter').click(function()
+        {
+               $('#hero-information-detailed > .hero-information-detailed-ul > li').hide();
+               $('li.shooter').show();
+        });
+        //辅助
+        $('#hero-information > #hero-information-title > .hero-information-title-ul > .hero-auxiliary').click(function()
+        {
+               $('#hero-information-detailed > .hero-information-detailed-ul > li').hide();
+               $('li.auxiliary').show();
+        });
+//--------------------------FANART创作馆--------------------------------------
+        $('#creative > a > div').mouseenter(function()
+        {
+            $(this).children('div').stop(true,true).fadeIn(300);
+        }).mouseleave(function()
+        {
+            $(this).children('div').stop(true,true).fadeOut(300);
+        });
+//--------------------------用户调查/合作媒体--------------------------------------
+       $('#user-survey > a > img').mouseenter(function()
+       {
+           $(this).stop(true,false).animate({'margin-top':'-15px'},200,'linear');
+       }).mouseleave(function()
+       {
+            $(this).stop(true,false).animate({'margin-top':'0px'},200,'linear');
+       });
+       $('#user-survey > ul > li').mouseenter(function()
+       {
+           let idxc = $(this).index();
+           $('#user-survey > ul > li > a > img').eq(idxc).stop(true,false).animate({'top':'-10px'},300,'linear');
+       }).mouseleave(function()
+       {
+            let idxc = $(this).index();
+            $('#user-survey > ul > li > a > img').eq(idxc).stop(true,false).animate({'top':'0px'},300,'linear');
+       });
+       $('#user-survey > ul > .user-survey-year').click(function()
+       {
+            alert('敬请期待');
+       });
+       $('#user-survey > ul > .media').mouseenter(function()
+       {
+           $('#user-survey > ul > li > .media-div').stop(true,true).fadeIn(300);
+       }).mouseleave(function()
+       {
+            $('#user-survey > ul > li > .media-div').stop(true,true).fadeOut(300);
+       });
+//---------------------------------侧边栏-----------------------------------------
+       $('#sidebar > li').mouseenter(function()
+       {
+           let idxe = $(this).index();
+           $('#sidebar > li > a > img').eq(idxe).stop(true,true).animate({'top':'-15px'},300,'linear',function()
+           {
+               $('#sidebar > li > a > img').eq(idxe).stop(true,true).animate({'top':'0px'},300,'linear',function()
+               {
+                   $('#sidebar > li > a > img').eq(idxe).stop(true,true).animate({'top':'-7px'},320,'linear',function()
+                   {
+                       $('#sidebar > li > a > img').eq(idxe).stop(true,true).animate({'top':'0px'},320,'linear');
+                   });
+               });
+           });
+       });
+    });
+</script>
