@@ -351,7 +351,7 @@
 /* ------------------------首页内容------------------------------------------- */
     #Home-page-content{
         width:90%;
-        height: 360px;
+        height: 392px;
         margin-bottom: 50px;
         margin-top: 70px;
         /* border: 1px solid red; */
@@ -376,8 +376,8 @@
         display: block;
         width: 100%;
         height: 100%;
-        background-size: cover;
-        background-position: center center;
+        /* background-size: cover;
+        background-position: center center; */
     }
     .promo-2 > input{
         float: left;
@@ -387,6 +387,7 @@
         background: rgb(227, 226, 226);
         border: 0px;
         outline: none;  /*去除点击事件 */
+        cursor: pointer;
     }
 
     .r-promo{
@@ -2872,7 +2873,8 @@
             );
         //图片轮播
             let idximg = $(this).index();
-            $('.promo-1 > a').eq(idximg).stop(true,true).show(300).siblings('a').stop(true,true).hide(300);
+            $('.promo-2 > input').parent('div').siblings('div').children('a').eq(idximg).stop(true,true).show(200).siblings('a').stop(true,true).hide(200);
+
         });
 //----------------------------综合/公告/赛事/攻略/社区--------------------------------
         $('.r-promo > .part-ul-title > li').on('mouseenter',function()
