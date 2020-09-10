@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英雄联盟主页</title>
     <script src="jquery-3.5.0.js"></script>
-
+    <!-- <link rel="stylesheet" href="jquery.mCustomScrollbar.css"> -->
+    <script src='jquery.mCustomScrollbar.js'></script>
     <style>
     *{
         margin: 0;
@@ -2530,7 +2531,7 @@
         <div><a href="https://lol.qq.com/data/info-heros.shtml">资料库 →</a></div>
     </div>
 <!-- 英雄资料内容 -->
-    <div id='hero-information-detailed'>
+    <div id='hero-information-detailed' class='content1' data-mcs-theme="minimal-dark">
         <ul class='hero-information-detailed-ul'>
             <li class='master'><a href="https://lol.qq.com/data/info-defail.shtml?id=1"><img src="img/hero/anni.png"></a><br>黑暗之女</li>
             <li class='warrior tank'><a href="https://lol.qq.com/data/info-defail.shtml?id=2"><img src="img/hero/aolafu.png"></a><br>狂战士</li>
@@ -2823,6 +2824,7 @@
 <script>
     $(function()
     {
+        // $(".content1").mCustomScrollbar();
 //------------------------头部内容-------------------------------------------
         //head div显示/隐藏
         //移入
